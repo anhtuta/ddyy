@@ -1,0 +1,119 @@
+  <!-- Button  chat Messenger, Zalo -->
+  <script src="https://kit.fontawesome.com/60f0e96d4b.js" crossorigin="anonymous"></script>  
+  <style>
+    .ddyy-zlfb-msg-container {
+      z-index: 1000;
+      position: fixed;
+    }
+    .ddyy-zlfb-float {
+      position: fixed !important;
+      right: 30px !important;
+      bottom: 20px !important;
+      z-index: 1000 !important;
+      background-color: #e74c3c !important;
+      color: #fff !important;
+      border-radius: 50% !important;
+      padding: 14px 14px !important;
+      cursor: pointer !important;
+      transition: 0.2s !important;
+      width: 55px !important; /* upload lên ddyy nhớ thay = 85px */
+      height: 55px !important; /* upload lên ddyy nhớ thay = 85px */
+      text-align: center !important;
+    }
+    .ddyy-zlfb-float:hover {
+      background-color: #000 !important;
+    }
+    .ddyy-btn-zlfb {
+      text-align: center !important;
+    }
+    .ddyy-zlfb-msg-wrapper {
+      position: fixed !important;
+      right: 30px !important;
+      bottom: 115px !important;
+      background: #FFF !important;
+      box-shadow: 0 0 20px rgba(0,0,0,.2) !important;
+      border-radius: 7px !important;
+    }
+    .ddyy-zlfb-msg-arrow-down {
+      position: fixed !important;
+      right: 60px !important;
+      bottom: 105px !important;
+      width: 0 !important;
+      height: 0 !important;
+      border-left: 10px solid transparent !important;
+      border-right: 10px solid transparent !important;
+      border-top: 10px solid #FFF !important;
+      box-shadow: 0px 20px 20px rgba(0,0,0,.2) !important;
+    }
+    .ddyy-zlfb-msg-wrapper ul {
+      list-style-type: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .ddyy-zlfb-item {
+      display: flex !important;
+      padding: 10px  !important;
+      color: #000  !important;
+    }
+    .ddyy-zlfb-item:hover {
+      background-color: #efefef !important;
+    }
+    .ddyy-zlfb-icon {
+      float: left !important;
+      margin-right: 7px !important;
+    }
+    .ddyy-zlfb-text {
+      display: inline-block !important;
+      position: relative !important;
+      top: 6px  !important;
+      color: #000;
+    }
+  </style>
+
+<div style="display: none !important;" class="ddyy-zlfb-msg-container" id="ddyyZlfbMsgContainer">
+  <div class="ddyy-zlfb-msg-wrapper">
+    <ul>
+      <li class="ddyy-zlfb-item">
+        <a href="https://m.me/xuongducdongyyen.vn" target="_blank">
+          <div class="ddyy-zlfb-icon"><img width="30" src="https://xuongducdongyyen.com/wp-content/uploads/2020/06/messenger-icon.png" /></div>
+          <div class="ddyy-zlfb-text">Facebook chat</div>
+        </a>
+      </li>
+      <li class="ddyy-zlfb-item">
+        <a href="https://zalo.me/0376743736" target="_blank">
+          <div class="ddyy-zlfb-icon"><img width="30" src="https://xuongducdongyyen.com/wp-content/uploads/2020/06/zalo-icon.png" /></div>
+          <div class="ddyy-zlfb-text">Zalo chat 0376 743 736</div>
+        </a>
+      </li>
+      <li class="ddyy-zlfb-item">
+        <a href="https://zalo.me/0835838368" target="_blank">
+          <div class="ddyy-zlfb-icon"><img width="30" src="https://xuongducdongyyen.com/wp-content/uploads/2020/06/zalo-icon.png" /></div>
+          <div class="ddyy-zlfb-text">Zalo chat 0835 838 368</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="ddyy-zlfb-msg-arrow-down"></div>
+</div>
+<div class="ddyy-zlfb-float" id="ddyyZlfbFloat">
+  <div class="ddyy-btn-zlfb">
+    <div>
+      <i style="font-size: 2em" class="fas fa-comment"></i>
+    </div>
+    Liên hệ
+  </div>
+</div>
+<script>
+  var ddyyZlfbMsgContainer = document.getElementById("ddyyZlfbMsgContainer");
+  var ddyyZlfbFloat = document.getElementById("ddyyZlfbFloat");
+  var ddyyZlfbFloatInitContent = ddyyZlfbFloat.innerHTML;
+  ddyyZlfbFloat.addEventListener("click", function() {
+    if(ddyyZlfbMsgContainer.style.display == "none") {
+      ddyyZlfbMsgContainer.style.display = "";
+      ddyyZlfbFloat.innerHTML = '<i style="position: relative;top: 11px;font-size: 2em;" class="fas fa-times"></i>';
+    } else {
+      ddyyZlfbMsgContainer.style.display = "none";
+      ddyyZlfbFloat.innerHTML = ddyyZlfbFloatInitContent;
+    }
+  });
+</script>

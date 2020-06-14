@@ -1,0 +1,6 @@
+Note: Tất cả những sửa đổi source code wordpress đều cần note vào đây
+Có thể vào đây mà sửa: https://xuongducdongyyen.com/wp-admin/theme-editor.php
+Hoặc cũng có thể vào cpanel edit file trực tiếp
+
+1. Sửa file functions.php của theme Hitmag
+2. Sửa file header.php của theme Hitmag: thêm Font Awesome
