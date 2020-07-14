@@ -75,7 +75,7 @@
       margin: auto;
       padding: 0;
       border: 1px solid #888;
-      width: 80%;
+      max-width: 600px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       -webkit-animation-name: animatetop;
       -webkit-animation-duration: 0.4s;
@@ -130,7 +130,8 @@
       color: white;
     }
 
-    .modal-header h2, .sub-title {
+    .modal-header h2,
+    .sub-title {
       text-transform: uppercase;
       text-align: center;
     }
@@ -147,6 +148,7 @@
       width: 100%;
     }
 
+    .btn-register,
     .btn-ok {
       border-radius: 24px;
       background-color: #129830;
@@ -163,15 +165,82 @@
     }
 
     .btn-ok:hover {
-      background-color:#05791f;
+      background-color: #05791f;
     }
+
     .modal-footer {
       display: flex;
       justify-content: center;
     }
+
     .modal-footer .btn-ok {
       margin-bottom: 16px;
       margin-top: 8px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+
+    .product {
+      width: 380px;
+    }
+
+    .section-register {
+      display: flex;
+      max-width: 800px;
+      margin: auto;
+      padding: 16px;
+    }
+
+    .register {
+      width: 380px;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid #ccc;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    #expired {
+      display: none;
+    }
+
+    .countdown-timer {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .time-digit {
+      width: 120px;
+      display: flex;
+      flex-direction: column;
+      padding: 7px;
+      color: #333;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-right: 12px;
+    }
+
+    .time-digit .value {
+      padding: 7px;
+      background-color: #E74C3C;
+      color: white;
+      border-radius: 10px;
+      letter-spacing: 3px;
+      font-size: 20px;
     }
   </style>
 </head>
@@ -198,9 +267,41 @@
     <div class="section-feedback">
 
     </div>
-    <div class="register-form" id="registerForm">
-      <div class="form-content">
-        <p>Register Form....</p>
+    <div class="section-register">
+      <div class="product">
+        <div class="price">100.000.0000</div>
+        <img width="300" height="400" src="./15 That Lan Von Cau.jpg" />
+      </div>
+      <div class="register">
+        <p>NHANH TAY LÊN!
+          CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
+        <div class="countdown-timer">
+          <div id="expired">Chương trình khuyến mãi đã kết thúc</div>
+          <div class="time-digit">
+            <p class="name">Ngày</p>
+            <div class="value" id="dd">00</div>
+          </div>
+          <div class="time-digit">
+            <p class="name">Giờ</p>
+            <div class="value" id="hh">00</div>
+          </div>
+          <div class="time-digit">
+            <p class="name">Phút</p>
+            <div class="value" id="mm">00</div>
+          </div>
+          <div class="time-digit">
+            <p class="name">Giây</p>
+            <div class="value" id="ss">00</div>
+          </div>
+        </div>
+        <div class="register-form">
+          <input placeholder="Nhập số điện thoại" />
+          <input placeholder="Họ tên" />
+          <input placeholder="Địa chỉ" />
+          <textarea placeholder="Để lại lời nhắn..." rows="2"></textarea>
+          <button class="btn-register">Nhận ưu đãi</button>
+          <p>Hãy kiểm tra lại lần cuối để chắc chắn số ĐT của bạn đã chính xác</p>
+        </div>
       </div>
     </div>
   </div>
@@ -235,7 +336,42 @@
         modal.style.display = "none";
       }
     }
+    function convertTimeValue(number) {
+      if (number < 10) return '0' + number;
+      return number;
+    }
+    var tomorow = new Date();
+    tomorow.setDate(tomorow.getDate());
+    countDownDate = new Date(tomorow.getTime() + 2 * 60 * 60 * 1000);
+    var x = setInterval(function () {
 
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("dd").innerHTML = convertTimeValue(days);
+      document.getElementById("hh").innerHTML = convertTimeValue(hours);
+      document.getElementById("mm").innerHTML = convertTimeValue(minutes);
+      document.getElementById("ss").innerHTML = convertTimeValue(seconds);
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("expired").style.display = "block";
+        document.getElementById("dd").innerHTML = '00';
+        document.getElementById("hh").innerHTML = '00';
+        document.getElementById("mm").innerHTML = '00';
+        document.getElementById("ss").innerHTML = '00';
+      }
+    }, 1000);
   </script>
 </body>
 
