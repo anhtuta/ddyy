@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,24 @@
     * {
       font-family: "Segoe UI";
     }
+
     .tlvc-wrapper {
       text-align: center;
     }
+
     .section-intro {
       max-width: 800px;
       display: inline-block;
     }
+
     .tlvc-div {
       text-align: center;
     }
+
     .tlvc-image {
       width: 100%;
     }
+
     .tlvc-btn {
       cursor: pointer;
       transition: 0.3s;
@@ -32,48 +38,205 @@
       margin: 5px 0;
       color: #FFF;
     }
+
     .tlvc-btn:hover {
       background: #FFCC00;
     }
+
     .tlvc-btn:focus {
       outline: 0;
     }
+
     @media only screen and (max-width: 500px) {
       .tlvc-image {
         width: 100%;
       }
     }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+      box-sizing: border-box;
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    @keyframes animatetop {
+      from {
+        top: -300px;
+        opacity: 0
+      }
+
+      to {
+        top: 0;
+        opacity: 1
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .modal-header h2, .sub-title {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .modal-body {
+      padding: 2px 24px;
+    }
+
+    .modal-body input {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .btn-ok {
+      border-radius: 24px;
+      background-color: #129830;
+      color: #f5f5f5;
+      padding: 12px;
+      text-transform: uppercase;
+      border: 0;
+      outline: 0;
+      padding: 12px 20px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn-ok:hover {
+      background-color:#05791f;
+    }
+    .modal-footer {
+      display: flex;
+      justify-content: center;
+    }
+    .modal-footer .btn-ok {
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
   </style>
 </head>
+
 <body>
   <div class="tlvc-wrapper">
     <div class="section-intro">
       <div class="tlvc-div">
         <img class="tlvc-image" src="./1 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn">Mua ngay</button>
+        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
         <img class="tlvc-image" src="./2 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn">Mua ngay</button>
+        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
         <img class="tlvc-image" src="./3 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn">Mua ngay</button>
+        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
         <img class="tlvc-image" src="./4 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn">Mua ngay</button>
+        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
         <img class="tlvc-image" src="./6 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn">Mua ngay</button>
+        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
       </div>
     </div>
     <div class="section-photos">
-      
+
     </div>
     <div class="section-feedback">
-      
+
     </div>
-    <div class="section-modal" id="modalRegister">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+    <div class="register-form" id="registerForm">
+      <div class="form-content">
+        <p>Register Form....</p>
       </div>
     </div>
   </div>
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onClick="closeModal()">&times;</span>
+        <h2>Đăng ký để được nhận tư vấn</h2>
+      </div>
+      <div class="modal-body">
+        <p class="sub-title">Nhận ưu đãi khi mua hàng ngay hôm nay</p>
+        <input placeholder="Nhập số điện thoại" />
+        <input placeholder="Họ tên" />
+        <input placeholder="Địa chỉ" />
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ok">Hoàn tất đăng ký</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    var modal = document.getElementById("registerModal");
+    function openModal() {
+      modal.style.display = "block";
+    }
+    function closeModal() {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
 </body>
+
 </html>
