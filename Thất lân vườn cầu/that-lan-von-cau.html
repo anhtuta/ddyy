@@ -9,24 +9,73 @@
     * {
       font-family: "Segoe UI";
     }
-
     .tlvc-wrapper {
       text-align: center;
     }
-
     .section-intro {
       max-width: 800px;
       display: inline-block;
     }
-
     .tlvc-div {
       text-align: center;
     }
-
+    .tlvc-item {
+      position: relative;
+    }
+    .tlvc-text {
+      position: absolute;
+      padding: 15px;
+      border-radius: 20px;
+    }
+    .tlvc-text h2 {
+      margin: 0 0 7px 0;
+    }
+    .tlvc-text p, .tlvc-text ul {
+      margin: 0;
+    }
+    .tlvc-text1 {
+      text-align: left;
+      color: #000;
+      background-color: #fffb00de;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+    }
+    .tlvc-text2 {
+      text-align: right;
+      color: #000;
+      background-color: #fffb00de;
+      top: 20px;
+      right: 20px;
+      max-width: 30%;
+    }
+    .tlvc-text3 {
+      text-align: left;
+      color: #000;
+      background-color: #fffb00de;
+      top: 20px;
+      left: 20px;
+      max-width: 30%;
+    }
+    .tlvc-text4 {
+      text-align: center;
+      color: #000;
+      background-color: #fffb00de;
+      bottom: 68px;
+      left: 20px;
+      right: 20px;
+    }
+    .tlvc-text5 {
+      text-align: left;
+      color: #000;
+      background-color: #fffb00de;
+      bottom: 68px;
+      left: 20px;
+      right: 20px;
+    }
     .tlvc-image {
       width: 100%;
     }
-
     .tlvc-btn {
       cursor: pointer;
       transition: 0.3s;
@@ -38,13 +87,31 @@
       margin: 5px 0;
       color: #FFF;
     }
-
     .tlvc-btn:hover {
       background: #FFCC00;
     }
-
     .tlvc-btn:focus {
       outline: 0;
+    }
+    .price {
+      background: #ffcc00;
+      display: inline-block;
+      padding: 10px 30px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .original-price {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: line-through;
+    }
+    .sale-text {
+      font-style: italic;
+    }
+    .sale-price {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #e74c3c;
     }
 
     @media only screen and (max-width: 500px) {
@@ -96,7 +163,6 @@
         opacity: 1
       }
     }
-
     @keyframes animatetop {
       from {
         top: -300px;
@@ -116,7 +182,6 @@
       font-size: 28px;
       font-weight: bold;
     }
-
     .close:hover,
     .close:focus {
       color: #000;
@@ -129,17 +194,14 @@
       background-color: #e74c3c;
       color: white;
     }
-
     .modal-header h2,
     .sub-title {
       text-transform: uppercase;
       text-align: center;
     }
-
     .modal-body {
       padding: 2px 24px;
     }
-
     .modal-body input {
       padding: 12px 20px;
       margin: 8px 0;
@@ -147,7 +209,6 @@
       border: 1px solid #ccc;
       width: 100%;
     }
-
     .btn-register,
     .btn-ok {
       border-radius: 24px;
@@ -163,7 +224,6 @@
       font-weight: 600;
       font-size: 14px;
     }
-
     .btn-ok:hover {
       background-color: #05791f;
     }
@@ -172,7 +232,6 @@
       display: flex;
       justify-content: center;
     }
-
     .modal-footer .btn-ok {
       margin-bottom: 16px;
       margin-top: 8px;
@@ -191,11 +250,9 @@
       margin: auto;
       padding: 16px;
     }
-
     .product {
       max-width: 380px;
     }
-
     .register {
       max-width: 380px;
       background-color: #FFFFFF;
@@ -258,16 +315,59 @@
   <div class="tlvc-wrapper">
     <div class="section-intro">
       <div class="tlvc-div">
-        <img class="tlvc-image" src="./1 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
-        <img class="tlvc-image" src="./2 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
-        <img class="tlvc-image" src="./3 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
-        <img class="tlvc-image" src="./4 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
-        <img class="tlvc-image" src="./6 That Lan Von Cau.jpg" />
-        <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+        <div class="tlvc-item">
+          <div class="tlvc-text tlvc-text1">
+            <h2>1. GIỚI THIỆU</h2>
+            <p>Đỉnh thất lân vờn cầu được biết đến như một trong những vật phẩm vừa dùng để làm đồ thờ cúng, vừa có vai trò trấn an, cân bằng phong thủy cực tốt. Vật phẩm không chỉ tăng giá trị thẩm mỹ cho không gian mà còn tạo thêm vẻ quyền thế, sang trọng, gia tăng vượng khí cho gia chủ, ngăn chặn những luồng khí xấu xâm nhập</p>
+          </div>
+          <img class="tlvc-image" src="./1 That Lan Von Cau.jpg" />
+          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+        </div>
+        <div class="tlvc-item">
+          <div class="tlvc-text tlvc-text2">
+            <h2>2. THIẾT KẾ</h2>
+            <p>Ở đây, bảy bức tượng Kỳ Lân đặt ở nắp đỉnh, thân đỉnh và chân đỉnh hiện lên vô cùng sống động. Lân chúa thể hiện phong thái uy dũng hơn cả. Nó nhe răng sắc nhọn, bên trong miệng ngậm ngọc, đôi tai xòe ra như chiếc quạt. Trên nắp đỉnh còn xuất hiện cả bình hồ lô và cuốn thư. Chúng tạo nên một bầu không khí trang nhã, cổ xưa. Các mặt của thân đỉnh được chạm các cảnh và Hán tự khác nhau</p>
+          </div>
+          <img class="tlvc-image" src="./2 That Lan Von Cau.jpg" />
+          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+        </div>
+        <div class="tlvc-item">
+          <div class="tlvc-text tlvc-text3">
+            <h2>3. CHẾ TÁC</h2>
+            <p>Bản thân Đỉnh đồng thất lân được đúc thủ công, chạm khảm kỳ công tinh tế thể hiện được sự sang trọng cho không gian, sự thịnh vượng, quyền quý, hiểu biết và độ chịu chơi cho gia chủ. Sản phẩm có khả năng chống ăn mòn cực tốt. Đây là yếu tố tạo nên vẻ đẹp trường tồn</p>
+          </div>
+          <img class="tlvc-image" src="./3 That Lan Von Cau.jpg" />
+          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+        </div>
+        <div class="tlvc-item">
+          <div class="tlvc-text tlvc-text4">
+            <h2>4. Ý NGHĨA</h2>
+            <p>Xét về phong thủy: Trong phong thủy đỉnh tròn, đỉnh quả bóng thất lân vờn cầu có tác dụng thu hút sinh khí, tài lộc. Theo quan điểm phương đông những vật phẩm khối tròn khi đặt trong nhà sẽ đem lại may mắn vượng khí cho gia chủ, chất liệu càng quý (vàng, bạc, đồng) thì cát khí càng cao, thu hút tài khí, tài vận càng tốt</p>
+          </div>
+          <img class="tlvc-image" src="./4 That Lan Von Cau.jpg" />
+          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+        </div>
+        <div class="tlvc-item">
+          <div class="tlvc-text tlvc-text5">
+            <h2>5. CÁCH BÀY</h2>
+            <ul>
+              <li>
+                Đỉnh Thất Lân thường được bày trong phòng khách, phòng thờ hoặc tại các không gian tâm linh. Đỉnh thất lân phải được đặt ở nơi thoáng đãng, sạch sẽ trang trọng, đặt quay mặt chính sao cho dễ quan sát, dễ ngắm
+              </li>
+              <li>
+                Nếu gia chủ bày ở phòng khách, nên đặt tại bàn tiếp khách cùng với sập gụ, tủ, chè nếu có, đặt quay mặt chính sao cho khi quan khách ngồi ghế uống nước có thể ngắm ngía được
+              </li>
+              <li>
+                Nếu gia chủ bày ở phòng thờ thì nên đặt phía trước bàn thờ và chính giữa, hai bên có thể bày kèm thêm đôi hạc hoặc cặp lộc bình bằng đồng để tăng thêm sự hài hòa về bố cục.
+              </li>
+              <li>
+                Với những mẫu đỉnh thất lân nhỏ dưới 90cm gia chủ có thể bày trên đôn gỗ hoặc trên mặt sập, tủ tùy vào từng không gian. Với đỉnh thất lân lớn từ 1m5 gia chủ nên đặt ở nơi có không gian rộng ngắm nhìn từ xa
+              </li>
+            </ul>
+          </div>
+          <img class="tlvc-image" src="./6 That Lan Von Cau.jpg" />
+          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+        </div>
       </div>
     </div>
     <div class="section-photos">
@@ -278,7 +378,11 @@
     </div>
     <div class="section-register">
       <div class="product">
-        <div class="price">100.000.0000</div>
+        <div class="price">
+          <div class="original-price">86 500 000 VNĐ</div>
+          <div class="sale-text">giảm chỉ còn</div>
+          <div class="sale-price">52 000 000 VNĐ</div>
+        </div>
         <img width="300" height="400" src="./15 That Lan Von Cau.jpg" />
       </div>
       <div class="register">
@@ -349,8 +453,11 @@
       if (number < 10) return '0' + number;
       return number;
     }
+    var currentTime = new Date();
     var tomorow = new Date();
-    tomorow.setDate(tomorow.getDate() + 1);
+    if(currentTime < tomorow) {
+      tomorow.setDate(tomorow.getDate() + 1);
+    }
     tomorow.setHours(2);
     tomorow.setMinutes(0);
     tomorow.setSeconds(0);
