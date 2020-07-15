@@ -184,19 +184,20 @@
       }
     }
 
-    .product {
-      width: 380px;
-    }
-
     .section-register {
       display: flex;
+      justify-content: space-between;
       max-width: 800px;
       margin: auto;
       padding: 16px;
     }
 
+    .product {
+      max-width: 380px;
+    }
+
     .register {
-      width: 380px;
+      max-width: 380px;
       background-color: #FFFFFF;
       border-radius: 10px;
       padding: 16px;
@@ -224,10 +225,9 @@
     }
 
     .time-digit {
-      width: 120px;
+      max-width: 120px;
       display: flex;
       flex-direction: column;
-      padding: 7px;
       color: #333;
       font-weight: 700;
       text-transform: uppercase;
@@ -241,6 +241,15 @@
       border-radius: 10px;
       letter-spacing: 3px;
       font-size: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .section-register {
+        display: block;
+      }
+      .product, .register {
+        margin-top: 24px;
+      }
     }
   </style>
 </head>
@@ -341,15 +350,17 @@
       return number;
     }
     var tomorow = new Date();
-    tomorow.setDate(tomorow.getDate());
-    countDownDate = new Date(tomorow.getTime() + 2 * 60 * 60 * 1000);
+    tomorow.setDate(tomorow.getDate() + 1);
+    tomorow.setHours(2);
+    tomorow.setMinutes(0);
+    tomorow.setSeconds(0);
     var x = setInterval(function () {
 
       // Get today's date and time
       var now = new Date().getTime();
 
       // Find the distance between now and the count down date
-      var distance = countDownDate - now;
+      var distance = tomorow - now;
 
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
