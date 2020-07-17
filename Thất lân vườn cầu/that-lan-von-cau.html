@@ -9,30 +9,39 @@
     * {
       font-family: "Segoe UI";
     }
+
     .tlvc-wrapper {
       text-align: center;
     }
+
     .section-intro {
       max-width: 800px;
       display: inline-block;
     }
+
     .tlvc-div {
       text-align: center;
     }
+
     .tlvc-item {
       position: relative;
     }
+
     .tlvc-text {
       position: absolute;
       padding: 15px;
       border-radius: 20px;
     }
+
     .tlvc-text h2 {
       margin: 0 0 7px 0;
     }
-    .tlvc-text p, .tlvc-text ul {
+
+    .tlvc-text p,
+    .tlvc-text ul {
       margin: 0;
     }
+
     .tlvc-text1 {
       text-align: left;
       color: #000;
@@ -41,6 +50,7 @@
       left: 20px;
       right: 20px;
     }
+
     .tlvc-text2 {
       text-align: right;
       color: #000;
@@ -49,6 +59,7 @@
       right: 20px;
       max-width: 30%;
     }
+
     .tlvc-text3 {
       text-align: left;
       color: #000;
@@ -57,6 +68,7 @@
       left: 20px;
       max-width: 30%;
     }
+
     .tlvc-text4 {
       text-align: center;
       color: #000;
@@ -65,6 +77,7 @@
       left: 20px;
       right: 20px;
     }
+
     .tlvc-text5 {
       text-align: left;
       color: #000;
@@ -73,9 +86,11 @@
       left: 20px;
       right: 20px;
     }
+
     .tlvc-image {
       width: 100%;
     }
+
     .tlvc-btn {
       cursor: pointer;
       transition: 0.3s;
@@ -87,12 +102,15 @@
       margin: 5px 0;
       color: #FFF;
     }
+
     .tlvc-btn:hover {
       background: #FFCC00;
     }
+
     .tlvc-btn:focus {
       outline: 0;
     }
+
     .price {
       background: #ffcc00;
       display: inline-block;
@@ -100,14 +118,17 @@
       margin-bottom: 10px;
       border-radius: 10px;
     }
+
     .original-price {
       font-size: 1.2em;
       font-weight: bold;
       text-decoration: line-through;
     }
+
     .sale-text {
       font-style: italic;
     }
+
     .sale-price {
       font-size: 1.3em;
       font-weight: bold;
@@ -163,6 +184,7 @@
         opacity: 1
       }
     }
+
     @keyframes animatetop {
       from {
         top: -300px;
@@ -182,6 +204,7 @@
       font-size: 28px;
       font-weight: bold;
     }
+
     .close:hover,
     .close:focus {
       color: #000;
@@ -194,14 +217,17 @@
       background-color: #e74c3c;
       color: white;
     }
+
     .modal-header h2,
     .sub-title {
       text-transform: uppercase;
       text-align: center;
     }
+
     .modal-body {
       padding: 2px 24px;
     }
+
     .modal-body input {
       padding: 12px 20px;
       margin: 8px 0;
@@ -209,6 +235,7 @@
       border: 1px solid #ccc;
       width: 100%;
     }
+
     .btn-register,
     .btn-ok {
       border-radius: 24px;
@@ -224,6 +251,7 @@
       font-weight: 600;
       font-size: 14px;
     }
+
     .btn-ok:hover {
       background-color: #05791f;
     }
@@ -232,6 +260,7 @@
       display: flex;
       justify-content: center;
     }
+
     .modal-footer .btn-ok {
       margin-bottom: 16px;
       margin-top: 8px;
@@ -250,9 +279,11 @@
       margin: auto;
       padding: 16px;
     }
+
     .product {
       max-width: 380px;
     }
+
     .register {
       max-width: 380px;
       background-color: #FFFFFF;
@@ -304,8 +335,45 @@
       .section-register {
         display: block;
       }
-      .product, .register {
+
+      .product,
+      .register {
         margin-top: 24px;
+      }
+    }
+
+    .section-photos {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .column {
+      padding: 0 4px;
+      box-sizing: border-box;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (min-width: 400px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
       }
     }
   </style>
@@ -318,7 +386,10 @@
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text1">
             <h2>1. GIỚI THIỆU</h2>
-            <p>Đỉnh thất lân vờn cầu được biết đến như một trong những vật phẩm vừa dùng để làm đồ thờ cúng, vừa có vai trò trấn an, cân bằng phong thủy cực tốt. Vật phẩm không chỉ tăng giá trị thẩm mỹ cho không gian mà còn tạo thêm vẻ quyền thế, sang trọng, gia tăng vượng khí cho gia chủ, ngăn chặn những luồng khí xấu xâm nhập</p>
+            <p>Đỉnh thất lân vờn cầu được biết đến như một trong những vật phẩm vừa dùng để làm đồ thờ cúng, vừa có vai
+              trò trấn an, cân bằng phong thủy cực tốt. Vật phẩm không chỉ tăng giá trị thẩm mỹ cho không gian mà còn
+              tạo thêm vẻ quyền thế, sang trọng, gia tăng vượng khí cho gia chủ, ngăn chặn những luồng khí xấu xâm nhập
+            </p>
           </div>
           <img class="tlvc-image" src="./1 That Lan Von Cau.jpg" />
           <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
@@ -326,7 +397,10 @@
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text2">
             <h2>2. THIẾT KẾ</h2>
-            <p>Ở đây, bảy bức tượng Kỳ Lân đặt ở nắp đỉnh, thân đỉnh và chân đỉnh hiện lên vô cùng sống động. Lân chúa thể hiện phong thái uy dũng hơn cả. Nó nhe răng sắc nhọn, bên trong miệng ngậm ngọc, đôi tai xòe ra như chiếc quạt. Trên nắp đỉnh còn xuất hiện cả bình hồ lô và cuốn thư. Chúng tạo nên một bầu không khí trang nhã, cổ xưa. Các mặt của thân đỉnh được chạm các cảnh và Hán tự khác nhau</p>
+            <p>Ở đây, bảy bức tượng Kỳ Lân đặt ở nắp đỉnh, thân đỉnh và chân đỉnh hiện lên vô cùng sống động. Lân chúa
+              thể hiện phong thái uy dũng hơn cả. Nó nhe răng sắc nhọn, bên trong miệng ngậm ngọc, đôi tai xòe ra như
+              chiếc quạt. Trên nắp đỉnh còn xuất hiện cả bình hồ lô và cuốn thư. Chúng tạo nên một bầu không khí trang
+              nhã, cổ xưa. Các mặt của thân đỉnh được chạm các cảnh và Hán tự khác nhau</p>
           </div>
           <img class="tlvc-image" src="./2 That Lan Von Cau.jpg" />
           <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
@@ -334,7 +408,9 @@
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text3">
             <h2>3. CHẾ TÁC</h2>
-            <p>Bản thân Đỉnh đồng thất lân được đúc thủ công, chạm khảm kỳ công tinh tế thể hiện được sự sang trọng cho không gian, sự thịnh vượng, quyền quý, hiểu biết và độ chịu chơi cho gia chủ. Sản phẩm có khả năng chống ăn mòn cực tốt. Đây là yếu tố tạo nên vẻ đẹp trường tồn</p>
+            <p>Bản thân Đỉnh đồng thất lân được đúc thủ công, chạm khảm kỳ công tinh tế thể hiện được sự sang trọng cho
+              không gian, sự thịnh vượng, quyền quý, hiểu biết và độ chịu chơi cho gia chủ. Sản phẩm có khả năng chống
+              ăn mòn cực tốt. Đây là yếu tố tạo nên vẻ đẹp trường tồn</p>
           </div>
           <img class="tlvc-image" src="./3 That Lan Von Cau.jpg" />
           <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
@@ -342,7 +418,10 @@
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text4">
             <h2>4. Ý NGHĨA</h2>
-            <p>Xét về phong thủy: Trong phong thủy đỉnh tròn, đỉnh quả bóng thất lân vờn cầu có tác dụng thu hút sinh khí, tài lộc. Theo quan điểm phương đông những vật phẩm khối tròn khi đặt trong nhà sẽ đem lại may mắn vượng khí cho gia chủ, chất liệu càng quý (vàng, bạc, đồng) thì cát khí càng cao, thu hút tài khí, tài vận càng tốt</p>
+            <p>Xét về phong thủy: Trong phong thủy đỉnh tròn, đỉnh quả bóng thất lân vờn cầu có tác dụng thu hút sinh
+              khí, tài lộc. Theo quan điểm phương đông những vật phẩm khối tròn khi đặt trong nhà sẽ đem lại may mắn
+              vượng khí cho gia chủ, chất liệu càng quý (vàng, bạc, đồng) thì cát khí càng cao, thu hút tài khí, tài vận
+              càng tốt</p>
           </div>
           <img class="tlvc-image" src="./4 That Lan Von Cau.jpg" />
           <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
@@ -352,16 +431,21 @@
             <h2>5. CÁCH BÀY</h2>
             <ul>
               <li>
-                Đỉnh Thất Lân thường được bày trong phòng khách, phòng thờ hoặc tại các không gian tâm linh. Đỉnh thất lân phải được đặt ở nơi thoáng đãng, sạch sẽ trang trọng, đặt quay mặt chính sao cho dễ quan sát, dễ ngắm
+                Đỉnh Thất Lân thường được bày trong phòng khách, phòng thờ hoặc tại các không gian tâm linh. Đỉnh thất
+                lân phải được đặt ở nơi thoáng đãng, sạch sẽ trang trọng, đặt quay mặt chính sao cho dễ quan sát, dễ
+                ngắm
               </li>
               <li>
-                Nếu gia chủ bày ở phòng khách, nên đặt tại bàn tiếp khách cùng với sập gụ, tủ, chè nếu có, đặt quay mặt chính sao cho khi quan khách ngồi ghế uống nước có thể ngắm ngía được
+                Nếu gia chủ bày ở phòng khách, nên đặt tại bàn tiếp khách cùng với sập gụ, tủ, chè nếu có, đặt quay mặt
+                chính sao cho khi quan khách ngồi ghế uống nước có thể ngắm ngía được
               </li>
               <li>
-                Nếu gia chủ bày ở phòng thờ thì nên đặt phía trước bàn thờ và chính giữa, hai bên có thể bày kèm thêm đôi hạc hoặc cặp lộc bình bằng đồng để tăng thêm sự hài hòa về bố cục.
+                Nếu gia chủ bày ở phòng thờ thì nên đặt phía trước bàn thờ và chính giữa, hai bên có thể bày kèm thêm
+                đôi hạc hoặc cặp lộc bình bằng đồng để tăng thêm sự hài hòa về bố cục.
               </li>
               <li>
-                Với những mẫu đỉnh thất lân nhỏ dưới 90cm gia chủ có thể bày trên đôn gỗ hoặc trên mặt sập, tủ tùy vào từng không gian. Với đỉnh thất lân lớn từ 1m5 gia chủ nên đặt ở nơi có không gian rộng ngắm nhìn từ xa
+                Với những mẫu đỉnh thất lân nhỏ dưới 90cm gia chủ có thể bày trên đôn gỗ hoặc trên mặt sập, tủ tùy vào
+                từng không gian. Với đỉnh thất lân lớn từ 1m5 gia chủ nên đặt ở nơi có không gian rộng ngắm nhìn từ xa
               </li>
             </ul>
           </div>
@@ -371,7 +455,18 @@
       </div>
     </div>
     <div class="section-photos">
-
+      <div class="column">
+        <img src="./7 That Lan Von Cau.jpg">
+        <img src="./15 That Lan Von Cau.jpg">
+        <img src="./13 That Lan Von Cau.jpg">
+        <img src="./14 That Lan Von Cau.jpg">
+      </div>
+      <div class="column">
+        <img src="./9 That Lan Von Cau.jpg">
+        <img src="./10 That Lan Von Cau.jpg">
+        <img src="./11 That Lan Von Cau.jpg">
+        <img src="./12 That Lan Von Cau.jpg">
+      </div>
     </div>
     <div class="section-feedback">
 
@@ -455,7 +550,7 @@
     }
     var currentTime = new Date();
     var tomorow = new Date();
-    if(currentTime < tomorow) {
+    if (currentTime < tomorow) {
       tomorow.setDate(tomorow.getDate() + 1);
     }
     tomorow.setHours(2);
