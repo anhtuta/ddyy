@@ -5,381 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thất Lân Vờn Cầu</title>
-  <style>
-    * {
-      font-family: "Segoe UI";
-    }
-
-    .tlvc-wrapper {
-      text-align: center;
-    }
-
-    .section-intro {
-      max-width: 800px;
-      display: inline-block;
-    }
-
-    .tlvc-div {
-      text-align: center;
-    }
-
-    .tlvc-item {
-      position: relative;
-    }
-
-    .tlvc-text {
-      position: absolute;
-      padding: 15px;
-      border-radius: 20px;
-    }
-
-    .tlvc-text h2 {
-      margin: 0 0 7px 0;
-    }
-
-    .tlvc-text p,
-    .tlvc-text ul {
-      margin: 0;
-    }
-
-    .tlvc-text1 {
-      text-align: left;
-      color: #000;
-      background-color: #fffb00de;
-      top: 20px;
-      left: 20px;
-      right: 20px;
-    }
-
-    .tlvc-text2 {
-      text-align: right;
-      color: #000;
-      background-color: #fffb00de;
-      top: 20px;
-      right: 20px;
-      max-width: 30%;
-    }
-
-    .tlvc-text3 {
-      text-align: left;
-      color: #000;
-      background-color: #fffb00de;
-      top: 20px;
-      left: 20px;
-      max-width: 30%;
-    }
-
-    .tlvc-text4 {
-      text-align: center;
-      color: #000;
-      background-color: #fffb00de;
-      bottom: 68px;
-      left: 20px;
-      right: 20px;
-    }
-
-    .tlvc-text5 {
-      text-align: left;
-      color: #000;
-      background-color: #fffb00de;
-      bottom: 68px;
-      left: 20px;
-      right: 20px;
-    }
-
-    .tlvc-image {
-      width: 100%;
-    }
-
-    .tlvc-btn {
-      cursor: pointer;
-      transition: 0.3s;
-      background: #E74C3C;
-      padding: 7px 15px;
-      font-size: 1.1em;
-      border: 0;
-      border-radius: 25px;
-      margin: 5px 0;
-      color: #FFF;
-    }
-
-    .tlvc-btn:hover {
-      background: #FFCC00;
-    }
-
-    .tlvc-btn:focus {
-      outline: 0;
-    }
-
-    .price {
-      background: #ffcc00;
-      display: inline-block;
-      padding: 10px 30px;
-      margin-bottom: 10px;
-      border-radius: 10px;
-    }
-
-    .original-price {
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: line-through;
-    }
-
-    .sale-text {
-      font-style: italic;
-    }
-
-    .sale-price {
-      font-size: 1.3em;
-      font-weight: bold;
-      color: #e74c3c;
-    }
-
-    @media only screen and (max-width: 500px) {
-      .tlvc-image {
-        width: 100%;
-      }
-    }
-
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      padding-top: 100px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    /* Modal Content */
-    .modal-content {
-      position: relative;
-      background-color: #fefefe;
-      margin: auto;
-      padding: 0;
-      border: 1px solid #888;
-      max-width: 450px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      -webkit-animation-name: animatetop;
-      -webkit-animation-duration: 0.4s;
-      animation-name: animatetop;
-      animation-duration: 0.4s;
-      box-sizing: border-box;
-    }
-
-    /* Add Animation */
-    @-webkit-keyframes animatetop {
-      from {
-        top: -300px;
-        opacity: 0
-      }
-
-      to {
-        top: 0;
-        opacity: 1
-      }
-    }
-
-    @keyframes animatetop {
-      from {
-        top: -300px;
-        opacity: 0
-      }
-
-      to {
-        top: 0;
-        opacity: 1
-      }
-    }
-
-    /* The Close Button */
-    .close {
-      color: white;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .modal-header {
-      padding: 2px 16px;
-      background-color: #e74c3c;
-      color: white;
-    }
-
-    .modal-header h2,
-    .sub-title {
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .modal-body {
-      padding: 2px 24px;
-    }
-
-    .modal-body input {
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      width: 100%;
-    }
-
-    .btn-register,
-    .btn-ok {
-      border-radius: 24px;
-      background-color: #129830;
-      color: #f5f5f5;
-      padding: 12px;
-      text-transform: uppercase;
-      border: 0;
-      outline: 0;
-      padding: 12px 20px;
-      text-align: center;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .btn-ok:hover {
-      background-color: #05791f;
-    }
-
-    .modal-footer {
-      display: flex;
-      justify-content: center;
-    }
-
-    .modal-footer .btn-ok {
-      margin-bottom: 16px;
-      margin-top: 8px;
-    }
-
-    @media screen and (max-width: 600px) {
-      .modal-content {
-        width: 100%;
-      }
-    }
-
-    .section-register {
-      display: flex;
-      justify-content: space-between;
-      max-width: 800px;
-      margin: auto;
-      padding: 16px;
-    }
-
-    .product {
-      max-width: 380px;
-    }
-
-    .register {
-      max-width: 380px;
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      padding: 16px;
-      border: 1px solid #ccc;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      width: 100%;
-    }
-
-    #expired {
-      display: none;
-    }
-
-    .countdown-timer {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .time-digit {
-      max-width: 120px;
-      display: flex;
-      flex-direction: column;
-      color: #333;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-right: 12px;
-    }
-
-    .time-digit .value {
-      padding: 7px;
-      background-color: #E74C3C;
-      color: white;
-      border-radius: 10px;
-      letter-spacing: 3px;
-      font-size: 20px;
-    }
-
-    @media screen and (max-width: 600px) {
-      .section-register {
-        display: block;
-      }
-
-      .product,
-      .register {
-        margin-top: 24px;
-      }
-    }
-
-    .section-photos {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .column {
-      padding: 0 4px;
-      box-sizing: border-box;
-    }
-
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
-      width: 100%;
-    }
-
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (min-width: 400px) {
-      .column {
-        flex: 50%;
-        max-width: 50%;
-      }
-    }
-
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 400px) {
-      .column {
-        flex: 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="that-lan-von-cau.css">
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=3121891904569704&autoLogAppEvents=1" nonce="Q8AahtUw"></script>
+
   <div class="tlvc-wrapper">
     <div class="section-intro">
       <div class="tlvc-div">
@@ -455,60 +87,66 @@
       </div>
     </div>
     <div class="section-photos">
-      <div class="column">
-        <img src="./7 That Lan Von Cau.jpg">
-        <img src="./15 That Lan Von Cau.jpg">
-        <img src="./13 That Lan Von Cau.jpg">
-        <img src="./14 That Lan Von Cau.jpg">
-      </div>
-      <div class="column">
-        <img src="./9 That Lan Von Cau.jpg">
-        <img src="./10 That Lan Von Cau.jpg">
-        <img src="./11 That Lan Von Cau.jpg">
-        <img src="./12 That Lan Von Cau.jpg">
+      <div class="column-wrapper">
+        <div class="column">
+          <img src="./7 That Lan Von Cau.jpg">
+          <img src="./15 That Lan Von Cau.jpg">
+          <img src="./13 That Lan Von Cau.jpg">
+          <img src="./14 That Lan Von Cau.jpg">
+        </div>
+        <div class="column">
+          <img src="./9 That Lan Von Cau.jpg">
+          <img src="./10 That Lan Von Cau.jpg">
+          <img src="./11 That Lan Von Cau.jpg">
+          <img src="./12 That Lan Von Cau.jpg">
+        </div>
       </div>
     </div>
     <div class="section-feedback">
-
+      <div class="feedback-wrapper">
+        <h2 class="feedback-label">FEEDBACK CỦA KHÁCH HÀNG</h2>
+        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/that-lan-von-cau.html" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
+      </div>
     </div>
     <div class="section-register">
-      <div class="product">
-        <div class="price">
-          <div class="original-price">86 500 000 VNĐ</div>
-          <div class="sale-text">giảm chỉ còn</div>
-          <div class="sale-price">52 000 000 VNĐ</div>
+      <div class="register-wrapper">
+        <div class="product">
+          <div class="price">
+            <div class="original-price">65 000 000 VNĐ</div>
+            <div class="sale-text">giảm chỉ còn</div>
+            <div class="sale-price">52 000 000 VNĐ</div>
+          </div>
+          <img style="width: 100%;" src="./1 That Lan Von Cau.jpg" />
         </div>
-        <img width="300" height="400" src="./15 That Lan Von Cau.jpg" />
-      </div>
-      <div class="register">
-        <p>NHANH TAY LÊN!
-          CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
-        <div class="countdown-timer">
-          <div id="expired">Chương trình khuyến mãi đã kết thúc</div>
-          <div class="time-digit">
-            <p class="name">Ngày</p>
-            <div class="value" id="dd">00</div>
+        <div class="register">
+          <p class="register-come-on">NHANH TAY LÊN!<br/>CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
+          <div class="countdown-timer">
+            <div id="expired">Chương trình khuyến mãi đã kết thúc</div>
+            <div class="time-digit">
+              <p class="name">Ngày</p>
+              <div class="value" id="dd">00</div>
+            </div>
+            <div class="time-digit">
+              <p class="name">Giờ</p>
+              <div class="value" id="hh">00</div>
+            </div>
+            <div class="time-digit">
+              <p class="name">Phút</p>
+              <div class="value" id="mm">00</div>
+            </div>
+            <div class="time-digit">
+              <p class="name">Giây</p>
+              <div class="value" id="ss">00</div>
+            </div>
           </div>
-          <div class="time-digit">
-            <p class="name">Giờ</p>
-            <div class="value" id="hh">00</div>
+          <div class="register-form">
+            <input placeholder="Họ tên" name="name" />
+            <input placeholder="Nhập số điện thoại" name="phone" />
+            <input placeholder="Địa chỉ" name="address" />
+            <textarea placeholder="Để lại lời nhắn..." rows="2"></textarea>
+            <button class="btn-register">Nhận ưu đãi</button>
+            <p>Hãy kiểm tra lại lần cuối để chắc chắn số ĐT của bạn đã chính xác</p>
           </div>
-          <div class="time-digit">
-            <p class="name">Phút</p>
-            <div class="value" id="mm">00</div>
-          </div>
-          <div class="time-digit">
-            <p class="name">Giây</p>
-            <div class="value" id="ss">00</div>
-          </div>
-        </div>
-        <div class="register-form">
-          <input placeholder="Họ tên" name="name" />
-          <input placeholder="Nhập số điện thoại" name="phone" />
-          <input placeholder="Địa chỉ" name="address" />
-          <textarea placeholder="Để lại lời nhắn..." rows="2"></textarea>
-          <button class="btn-register">Nhận ưu đãi</button>
-          <p>Hãy kiểm tra lại lần cuối để chắc chắn số ĐT của bạn đã chính xác</p>
         </div>
       </div>
     </div>
@@ -548,14 +186,17 @@
       if (number < 10) return '0' + number;
       return number;
     }
-    var currentTime = new Date();
+
+    // 2:00 a.m
     var tomorow = new Date();
-    if (currentTime < tomorow) {
-      tomorow.setDate(tomorow.getDate() + 1);
-    }
     tomorow.setHours(2);
     tomorow.setMinutes(0);
     tomorow.setSeconds(0);
+
+    var currentTime = new Date();
+    if (currentTime > tomorow) {
+      tomorow.setDate(tomorow.getDate() + 1);
+    }
     var x = setInterval(function () {
 
       // Get today's date and time
@@ -587,5 +228,4 @@
     }, 1000);
   </script>
 </body>
-
 </html>
