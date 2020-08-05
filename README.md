@@ -22,3 +22,6 @@
   Lệnh return ở trên sẽ bỏ qua toàn bộ đoạn code ở dưới (chính là code review của Woocommerce), chú ý data-href chính là URL liên kết với cái comment đó, thế nên comment này sẽ thay đổi với mỗi sản phẩm
   + Ngoài ra còn thêm icon loading nữa, và đoạn script check nếu như render xong cái comment của fb thì hide thằng icon loading đó đi
 - /wp-content/plugins/woocommerce/includes/wc-template-functions.php, dòng 1758: Sửa text để hiện thị chữ "Bình luận" ở trang review sản phẩm Woocommerce
+- wp-config.php:
+  + Thêm dòng sau vào đầu file để cài WP Super Cache: define( 'WP_CACHE', true );
+  + Thêm dòng sau vào đầu file để tắt tính năng tự động lưu các bản nháp bài viết sau mỗi thời gian nhất định (cho database đỡ bị phình to): define('WP_POST_REVISIONS', false );
