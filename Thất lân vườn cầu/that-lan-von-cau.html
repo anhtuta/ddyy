@@ -10,7 +10,9 @@
 
 <body>
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=3121891904569704&autoLogAppEvents=1" nonce="Q8AahtUw"></script>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=3121891904569704&autoLogAppEvents=1"
+    nonce="Q8AahtUw"></script>
 
   <div class="tlvc-wrapper">
     <div class="section-intro">
@@ -24,7 +26,7 @@
             </p>
           </div>
           <img class="tlvc-image" src="./1 That Lan Von Cau.jpg" />
-          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text2">
@@ -35,7 +37,7 @@
               nhã, cổ xưa. Các mặt của thân đỉnh được chạm các cảnh và Hán tự khác nhau</p>
           </div>
           <img class="tlvc-image" src="./2 That Lan Von Cau.jpg" />
-          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text3">
@@ -45,7 +47,7 @@
               ăn mòn cực tốt. Đây là yếu tố tạo nên vẻ đẹp trường tồn</p>
           </div>
           <img class="tlvc-image" src="./3 That Lan Von Cau.jpg" />
-          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text4">
@@ -56,7 +58,7 @@
               càng tốt</p>
           </div>
           <img class="tlvc-image" src="./4 That Lan Von Cau.jpg" />
-          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text5">
@@ -82,7 +84,7 @@
             </ul>
           </div>
           <img class="tlvc-image" src="./6 That Lan Von Cau.jpg" />
-          <button class="tlvc-btn" onClick="openModal()">Mua ngay</button>
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
       </div>
     </div>
@@ -105,7 +107,8 @@
     <div class="section-feedback">
       <div class="feedback-wrapper">
         <h2 class="feedback-label">FEEDBACK CỦA KHÁCH HÀNG</h2>
-        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/that-lan-von-cau.html" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
+        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/that-lan-von-cau.html" data-numposts="5"
+          data-width="100%" data-colorscheme="dark"></div>
       </div>
     </div>
     <div class="section-register">
@@ -119,7 +122,7 @@
           <img style="width: 100%;" src="./1 That Lan Von Cau.jpg" />
         </div>
         <div class="register">
-          <p class="register-come-on">NHANH TAY LÊN!<br/>CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
+          <p class="register-come-on">NHANH TAY LÊN!<br />CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
           <div class="countdown-timer">
             <div id="expired">Chương trình khuyến mãi đã kết thúc</div>
             <div class="time-digit">
@@ -140,65 +143,160 @@
             </div>
           </div>
           <div class="register-form">
-            <input placeholder="Họ tên" name="name" />
-            <input placeholder="Nhập số điện thoại" name="phone" />
-            <input placeholder="Địa chỉ" name="address" />
-            <textarea placeholder="Để lại lời nhắn..." rows="2"></textarea>
-            <button class="btn-register">Nhận ưu đãi</button>
+            <input required id="txtName2" placeholder="Họ tên" name="name" />
+            <input required id="txtPhone2" placeholder="Nhập số điện thoại" name="phone" />
+            <input id="txtAddress2" placeholder="Địa chỉ" name="address" />
+            <textarea id="txtMessage2" placeholder="Để lại lời nhắn..." rows="2"></textarea>
+            <button class="btn-register" onclick="register(2)">Nhận ưu đãi</button>
             <p>Hãy kiểm tra lại lần cuối để chắc chắn số ĐT của bạn đã chính xác</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <!-- Register Modal -->
   <div id="registerModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <span class="close" onClick="closeModal()">&times;</span>
+        <span class="close" onClick="closeRegisterModal()">&times;</span>
         <h2>Đăng ký để được nhận tư vấn</h2>
       </div>
       <div class="modal-body">
         <p class="sub-title">Nhận ưu đãi khi mua hàng ngay hôm nay</p>
-        <input placeholder="Họ tên" name="name" />
-        <input placeholder="Nhập số điện thoại" name="phone" />
-        <input placeholder="Địa chỉ" name="address" />
+        <input required id="txtName1" placeholder="Họ tên" name="name" />
+        <input required id="txtPhone1" placeholder="Nhập số điện thoại" name="phone" />
+        <input id="txtAddress1" placeholder="Địa chỉ" name="address" />
       </div>
       <div class="modal-footer">
-        <button class="btn-ok">Hoàn tất đăng ký</button>
+        <button class="btn-ok" onclick="register(1)">Hoàn tất đăng ký</button>
       </div>
     </div>
   </div>
+
+  <!-- Success Modal -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onClick="closeSuccessModal()">&times;</span>
+        <h2>Đăng ký thành công</h2>
+      </div>
+      <div class="modal-body">
+        <p class="sub-title">Chúng tôi sẽ gọi lại cho quý khách sớm nhất có thể, xin cảm ơn!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ok" onclick="closeSuccessModal()">OK</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    var modal = document.getElementById("registerModal");
-    function openModal() {
-      modal.style.display = "block";
+    var registerModal = document.getElementById("registerModal");
+    var successModal = document.getElementById("successModal");
+    var BASE_URL = window.location.protocol + "//" + window.location.hostname + "/tlvc-api";
+
+    function getById(id) {
+      return document.getElementById(id);
     }
-    function closeModal() {
-      modal.style.display = "none";
+
+    function openRegisterModal() {
+      registerModal.style.display = "block";
+    }
+    function closeRegisterModal() {
+      registerModal.style.display = "none";
+    }
+    function openSuccessModal() {
+      successModal.style.display = "block";
+    }
+    function closeSuccessModal() {
+      successModal.style.display = "none";
     }
     window.onclick = function (event) {
-      if (event.target === modal) {
-        modal.style.display = "none";
+      if (event.target === registerModal) {
+        registerModal.style.display = "none";
+      } else if (event.target === successModal) {
+        successModal.style.display = "none";
       }
     }
+    function register(num) {
+      var xhttp = new XMLHttpRequest();
+      var name, phone, address, message;
+      if (num === 1) {
+        name = getById("txtName1").value.trim();
+        phone = getById("txtPhone1").value.trim();
+        address = getById("txtAddress1").value.trim();
+        message = "";
+      } else if (num === 2) {
+        name = getById("txtName2").value.trim();
+        phone = getById("txtPhone2").value.trim();
+        address = getById("txtAddress2").value.trim();
+        message = getById("txtMessage2").value.trim();
+      }
+      if (!name || !phone) {
+        alert("Vui lòng nhập đầy đủ tên và số điện thoại");
+        return;
+      }
+      var data = {
+        name, phone, address, message
+      }
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 201) {
+          var json = JSON.parse(this.responseText);
+          console.log(json)
+          closeRegisterModal();
+          openSuccessModal();
+        }
+      };
+      xhttp.open("POST", BASE_URL + "/api/tlvc-order/create.php", true);
+      xhttp.setRequestHeader("Content-Type", "application/json");
+      xhttp.send(JSON.stringify(data));
+
+      return false;
+    }
+
+    // Restricts input for the given textbox to the given inputFilter function.
+    function setInputFilter(textbox, inputFilter) {
+      ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+        textbox.addEventListener(event, function () {
+          if (inputFilter(this.value)) {
+            this.oldValue = this.value;
+            this.oldSelectionStart = this.selectionStart;
+            this.oldSelectionEnd = this.selectionEnd;
+          } else if (this.hasOwnProperty("oldValue")) {
+            this.value = this.oldValue;
+            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+          } else {
+            this.value = "";
+          }
+        });
+      });
+    }
+
+    // Allow digits and '.' only, using a RegExp
+    var phoneRegex = /^[0-9. ]*$/;
+    setInputFilter(getById("txtPhone1"), function (value) {
+      return phoneRegex.test(value);
+    });
+    setInputFilter(getById("txtPhone2"), function (value) {
+      return phoneRegex.test(value);
+    });
+
     function convertTimeValue(number) {
       if (number < 10) return '0' + number;
       return number;
     }
 
-    // 2:00 a.m
-    var tomorow = new Date();
-    tomorow.setHours(2);
-    tomorow.setMinutes(0);
-    tomorow.setSeconds(0);
+    var countdownInterval = setInterval(function () {
+      // 2:00 a.m
+      var tomorow = new Date();
+      tomorow.setHours(2);
+      tomorow.setMinutes(0);
+      tomorow.setSeconds(0);
 
-    var currentTime = new Date();
-    if (currentTime > tomorow) {
-      tomorow.setDate(tomorow.getDate() + 1);
-    }
-    var x = setInterval(function () {
-
+      var currentTime = new Date();
+      if (currentTime > tomorow) {
+        tomorow.setDate(tomorow.getDate() + 1);
+      }
       // Get today's date and time
       var now = new Date().getTime();
 
@@ -218,7 +316,7 @@
       document.getElementById("ss").innerHTML = convertTimeValue(seconds);
       // If the count down is over, write some text 
       if (distance < 0) {
-        clearInterval(x);
+        clearInterval(countdownInterval);
         document.getElementById("expired").style.display = "block";
         document.getElementById("dd").innerHTML = '00';
         document.getElementById("hh").innerHTML = '00';
@@ -228,4 +326,5 @@
     }, 1000);
   </script>
 </body>
+
 </html>
