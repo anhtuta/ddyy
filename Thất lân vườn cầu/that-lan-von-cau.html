@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Đỉnh thất lân vờn cầu bằng đồng cao cấp, chế tác thủ công, tinh xảo. Miễn phí giao hàng toàn quốc, thanh toán khi nhận hàng" />
-  <title>Đỉnh Thất Lân Vờn Cầu</title>
+  <title>Đỉnh Thất Lân Vờn Cầu | Đúc Đồng Ý Yên</title>
   <link rel="stylesheet" type="text/css" href="that-lan-von-cau.css">
+  <link rel="icon" href="./icon.png">
 </head>
 
 <body>
@@ -17,7 +18,8 @@
     nonce="Q8AahtUw"></script>
 
   <div class="tlvc-wrapper">
-    <div class="section-header">
+    <!--
+	<div class="section-header">
       <div class="header-background">
         <div class="tlvc-title">
           <h2>THẤT LÂN VỜN CẦU</h2>
@@ -26,11 +28,12 @@
         </div>
       </div>
     </div>
+	-->
     <div class="section-intro">
       <div class="tlvc-div">
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./1 That Lan Von Cau_with text.jpg" />
-          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
+          <img class="tlvc-image" src="./1 That Lan Von Cau_with text 3.jpg" />
+          <button class="first-btn-buynow" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
           <div class="tlvc-text tlvc-text2">
@@ -84,6 +87,7 @@
       </div>
     </div>
     <div class="section-photos">
+      <h2 class="photos-label">HÌNH ẢNH SẢN PHẨM</h2>
       <div class="column-wrapper">
         <div class="column">
           <img src="./7 That Lan Von Cau.jpg">
@@ -140,10 +144,7 @@
           <div class="register-form">
             <input required id="txtName2" placeholder="Họ tên" name="name" />
             <input required id="txtPhone2" placeholder="Nhập số điện thoại" name="phone" />
-            <input id="txtAddress2" placeholder="Địa chỉ" name="address" />
-            <textarea id="txtMessage2" placeholder="Để lại lời nhắn..." rows="2"></textarea>
             <button class="btn-register" onclick="register(2)">Nhận ưu đãi</button>
-            <p>Hãy kiểm tra lại lần cuối để chắc chắn số ĐT của bạn đã chính xác</p>
           </div>
         </div>
       </div>
@@ -155,13 +156,12 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close" onClick="closeRegisterModal()">&times;</span>
-        <h2>Đăng ký để được nhận tư vấn</h2>
+        <h2>Đăng ký nhận tư vấn</h2>
       </div>
       <div class="modal-body">
         <p class="sub-title">Nhận ưu đãi khi mua hàng ngay hôm nay</p>
         <input required id="txtName1" placeholder="Họ tên" name="name" />
         <input required id="txtPhone1" placeholder="Nhập số điện thoại" name="phone" />
-        <input id="txtAddress1" placeholder="Địa chỉ" name="address" />
       </div>
       <div class="modal-footer">
         <button class="btn-ok" onclick="register(1)">Hoàn tất đăng ký</button>
@@ -195,13 +195,13 @@
     }
 
     function openRegisterModal() {
-      registerModal.style.display = "block";
+      registerModal.style.display = "flex";
     }
     function closeRegisterModal() {
       registerModal.style.display = "none";
     }
     function openSuccessModal() {
-      successModal.style.display = "block";
+      successModal.style.display = "flex";
     }
     function closeSuccessModal() {
       successModal.style.display = "none";
@@ -219,13 +219,9 @@
       if (num === 1) {
         name = getById("txtName1").value.trim();
         phone = getById("txtPhone1").value.trim();
-        address = getById("txtAddress1").value.trim();
-        message = "";
       } else if (num === 2) {
         name = getById("txtName2").value.trim();
         phone = getById("txtPhone2").value.trim();
-        address = getById("txtAddress2").value.trim();
-        message = getById("txtMessage2").value.trim();
       }
       if (!name || !phone) {
         alert("Vui lòng nhập đầy đủ tên và số điện thoại");
@@ -237,9 +233,9 @@
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 201) {
           var json = JSON.parse(this.responseText);
-          console.log(json)
           closeRegisterModal();
-          openSuccessModal();
+          // openSuccessModal();
+          window.location = "./cam-on.html";
         }
       };
       xhttp.open("POST", BASE_URL + "/api/tlvc-order/create.php", true);

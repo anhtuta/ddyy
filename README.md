@@ -28,6 +28,10 @@
   + Thêm dòng sau vào đầu file để cài WP Super Cache: define( 'WP_CACHE', true );
   + Thêm dòng sau vào đầu file để tắt tính năng tự động lưu các bản nháp bài viết sau mỗi thời gian nhất định (cho database đỡ bị phình to): define('WP_POST_REVISIONS', false );
 - /hitmag/woocommerce/single-product/tabs: trong thư mục này có 3 file, tương ứng với 3 tab trong trang sản phẩm, comment header ở 2 file additional-information.php và description.php
+- /hitmag/woocommerce/loop/result-count.php:
+  Translate text thành: "Hiển thị %d kết quả":
+  + echo 'Hiển thị 1 kết quả';
+  + printf('Hiển thị %1$d&ndash;%2$d của %3$d kết quả', $first, $last, $total );
 
 # Dùng thêm Cloudflare nữa
 - Hiểu đơn giản: ta sẽ cấu hình tên miền cho nó trỏ tới thằng cloudflare: vào trang https://access.pavietnam.vn/index.php, config như sau:
