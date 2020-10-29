@@ -6,9 +6,39 @@
   text-align: center;
 }
 
+.section-header {
+  background-image: url(./2\That\Lan\Von\Cau.jpg);
+  background-color: rgba(255, 255, 255, 0);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+.header-background {
+  background-color: rgb(0 0 0 / 51%);
+  height: 600px;
+  display: flex;
+}
+
 .section-intro {
   max-width: 800px;
   display: inline-block;
+}
+
+.tlvc-title {
+  padding: 10px;
+  color: #fff;
+  width: 800px;
+  text-align: left;
+  margin: auto;
+}
+.tlvc-title h2 {
+  font-size: 2.5em;
+}
+.tlvc-title div {
+  font-size: 1.7em;
+  margin: 10px 0;
 }
 
 .tlvc-div {
@@ -18,18 +48,45 @@
 .tlvc-item {
   position: relative;
 }
+.first-btn-buynow {
+  cursor: pointer;
+  transition: 0.3s;
+  background: #e74c3c;
+  padding: 7px 15px;
+  font-size: 2.5em;
+  font-weight: bold;
+  border: 0;
+  border-radius: 42px;
+  margin: 5px 0;
+  color: #fc0;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 14%;
+  right: 6px;
+  border: 5px solid #fc0;
+  box-sizing: border-box;
+}
+.first-btn-buynow:hover {
+  color: #FFF;
+  border: 5px solid #FFF;
 
+}
+.first-btn-buynow:focus {
+  outline: 0;
+}
 .tlvc-text {
   position: absolute;
   padding: 15px;
   border-radius: 20px;
+  display: none;
 }
 
 .tlvc-text h2 {
   margin: 0 0 7px 0;
 }
 
-.tlvc-text p, .tlvc-text ul {
+.tlvc-text p,
+.tlvc-text ul {
   margin: 0;
 }
 
@@ -85,17 +142,17 @@
 .tlvc-btn {
   cursor: pointer;
   transition: 0.3s;
-  background: #E74C3C;
+  background: #e74c3c;
   padding: 7px 15px;
   font-size: 1.1em;
   border: 0;
   border-radius: 25px;
   margin: 5px 0;
-  color: #FFF;
+  color: #fff;
 }
 
 .tlvc-btn:hover {
-  background: #FFCC00;
+  background: #ffcc00;
 }
 
 .tlvc-btn:focus {
@@ -130,6 +187,11 @@
   .tlvc-image {
     width: 100%;
   }
+  .first-btn-buynow {
+    font-size: 1em;
+    top: 76%;
+    right: 4px;
+  }
 }
 
 /* The Modal (background) */
@@ -138,7 +200,6 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -170,22 +231,22 @@
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
-    opacity: 0
+    opacity: 0;
   }
   to {
     top: 0;
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes animatetop {
   from {
     top: -300px;
-    opacity: 0
+    opacity: 0;
   }
   to {
     top: 0;
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -198,7 +259,8 @@
   font-weight: bold;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -210,7 +272,8 @@
   color: white;
 }
 
-.modal-header h2, .sub-title {
+.modal-header h2,
+.sub-title {
   text-transform: uppercase;
   text-align: center;
 }
@@ -227,7 +290,8 @@
   width: 100%;
 }
 
-.btn-register, .btn-ok {
+.btn-register,
+.btn-ok {
   border-radius: 24px;
   background-color: #129830;
   color: #f5f5f5;
@@ -240,6 +304,7 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
+  margin-top: 15px;
 }
 
 .btn-ok:hover {
@@ -278,19 +343,21 @@
 }
 
 .register {
-  max-width: 380px;
-  background-color: #FFFFFF;
+  max-width: 412px;
+  background-color: #ffffff;
   border-radius: 10px;
-  padding: 16px;
+  padding: 22px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 .register-come-on {
-  color: #E74C3C;
+  color: #e74c3c;
   font-weight: bold;
   font-size: 1.2em;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -306,7 +373,7 @@ input, textarea {
 .countdown-timer {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .time-digit {
@@ -316,29 +383,41 @@ input, textarea {
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
-  margin-right: 12px;
 }
 
 .time-digit .value {
   padding: 7px;
-  background-color: #E74C3C;
+  background-color: #e74c3c;
   color: white;
   border-radius: 10px;
   letter-spacing: 3px;
-  font-size: 35px;
+  font-size: 40px;
+}
+
+.register-form {
+  margin-top: 32px;
 }
 
 @media screen and (max-width: 600px) {
   .register-wrapper {
     display: block;
   }
-  .product, .register {
+  .product,
+  .register {
     margin-top: 24px;
+  }
+  .time-digit .value {
+    font-size: 35px;
   }
 }
 
 .section-photos {
   background-color: #e74c3c;
+}
+.photos-label {
+  margin: 0;
+  padding: 10px 0;
+  color: #fff;
 }
 
 .column-wrapper {
@@ -379,21 +458,23 @@ input, textarea {
 }
 
 .section-feedback {
-  background: #000;
+  /* background: #000; */
 }
 .feedback-wrapper {
   max-width: 800px;
   margin: auto;
-  color: #FFF;
+  /* color: #FFF; */
 }
 .feedback-label {
   margin: 0;
   padding: 10px;
 }
 .pluginSkinDark span {
-  color: #FFF;
+  color: #fff;
 }
 /* fix fb comment box issue */
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe[style] {
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget iframe[style] {
   width: 100% !important;
 }
