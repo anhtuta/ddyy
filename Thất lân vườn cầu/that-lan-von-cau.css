@@ -1,6 +1,10 @@
 * {
   font-family: "Segoe UI";
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .tlvc-wrapper {
   text-align: center;
@@ -63,12 +67,11 @@
   position: absolute;
   bottom: 14%;
   right: 6px;
-  border: 5px solid #fc0;
+  /* border: 5px solid #fc0; */
   box-sizing: border-box;
 }
 .first-btn-buynow:hover {
   color: #FFF;
-  border: 5px solid #FFF;
 
 }
 .first-btn-buynow:focus {
@@ -477,4 +480,19 @@ textarea {
 .fb_iframe_widget span,
 .fb_iframe_widget iframe[style] {
   width: 100% !important;
+}
+
+.btn-buynow-blink {
+  animation: blinker 300ms infinite;
+}
+
+@keyframes blinker {
+  50% {
+    background: #e74c3c;
+    color: #fff;
+  }
+  100% {
+    background: #fc0;
+    color: #000;
+  }
 }

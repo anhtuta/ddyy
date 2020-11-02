@@ -1,19 +1,13 @@
 * {
   font-family: "Segoe UI";
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .tlvc-wrapper {
   text-align: center;
-}
-
-.section-header {
-  background-image: url(./2\That\Lan\Von\Cau.jpg);
-  background-color: rgba(255, 255, 255, 0);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  height: 600px;
 }
 .header-background {
   background-color: rgb(0 0 0 / 51%);
@@ -47,6 +41,17 @@
 
 .tlvc-item {
   position: relative;
+}
+.tlvc-item h2 {
+  margin: 0;
+  padding: 10px;
+}
+.item-header {
+  background: #fc0;
+}
+.item-header .header-strong {
+  color: #e74c3c;
+  font-size: 1.1em;
 }
 .first-btn-buynow {
   cursor: pointer;
