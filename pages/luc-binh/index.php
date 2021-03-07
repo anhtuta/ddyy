@@ -11,7 +11,15 @@
   <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
   <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?date=20201103">
   <link rel="icon" href="../static/img/icon.png">
+  <script src="../static/js/script.js"></script>
 </head>
+
+<?php
+  $originalPrice = "72 000 000 VNĐ";
+  $salePrice = "58 000 000 VNĐ";
+  $product = "Lục bình";
+  $imgSectionRegister = "./luc-binh-1.jpg";
+?>
 
 <body>
   <div id="fb-root"></div>
@@ -64,217 +72,13 @@
       </div>
     </div>
     <div class="section-register">
-      <div class="register-wrapper">
-        <div class="product">
-          <div class="price">
-            <div class="original-price">91 000 000 VNĐ</div>
-            <div class="sale-text">giảm chỉ còn</div>
-            <div class="sale-price">73 000 000 VNĐ</div>
-          </div>
-          <img style="width: 100%;" src="./luc-binh-3.jpg" />
-        </div>
-        <div class="register">
-          <p class="register-come-on">NHANH TAY LÊN!<br />CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
-          <div class="countdown-timer">
-            <div id="expired">Chương trình khuyến mãi đã kết thúc</div>
-            <div class="time-digit">
-              <p class="name">Ngày</p>
-              <div class="value" id="dd">00</div>
-            </div>
-            <div class="time-digit">
-              <p class="name">Giờ</p>
-              <div class="value" id="hh">00</div>
-            </div>
-            <div class="time-digit">
-              <p class="name">Phút</p>
-              <div class="value" id="mm">00</div>
-            </div>
-            <div class="time-digit">
-              <p class="name">Giây</p>
-              <div class="value" id="ss">00</div>
-            </div>
-          </div>
-          <div class="register-form">
-            <input required id="txtName2" placeholder="Họ tên" name="name" />
-            <input required id="txtPhone2" placeholder="Nhập số điện thoại" name="phone" />
-            <button class="btn-register" onclick="register(2)">Nhận ưu đãi</button>
-          </div>
-        </div>
-      </div>
+      <?php require '../register-section.php'; ?>
     </div>
 
     <?php require '../footer.php' ?>
   </div>
 
-  <!-- Register Modal -->
-  <div id="registerModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close" onClick="closeRegisterModal()">&times;</span>
-        <h2>Đăng ký nhận tư vấn</h2>
-      </div>
-      <div class="modal-body">
-        <p class="sub-title">Nhận ưu đãi khi mua hàng ngay hôm nay</p>
-        <input required id="txtName1" placeholder="Họ tên" name="name" />
-        <input required id="txtPhone1" placeholder="Nhập số điện thoại" name="phone" />
-      </div>
-      <div class="modal-footer">
-        <button class="btn-ok" onclick="register(1)">Hoàn tất đăng ký</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Success Modal -->
-  <div id="successModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close" onClick="closeSuccessModal()">&times;</span>
-        <h2>Đăng ký thành công</h2>
-      </div>
-      <div class="modal-body">
-        <p class="sub-title">Chúng tôi sẽ gọi lại cho quý khách sớm nhất có thể, xin cảm ơn!</p>
-      </div>
-      <div class="modal-footer">
-        <button class="btn-ok" onclick="closeSuccessModal()">OK</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    var registerModal = document.getElementById("registerModal");
-    var successModal = document.getElementById("successModal");
-
-    // giống value trong file .env ở project tlvc-order-fe
-    // var REACT_APP_HOST_API = "http://localhost:8888"; //local
-    var REACT_APP_HOST_API = "https://xuongducdongyyen.com/tlvc-api" //product
-
-    function getById(id) {
-      return document.getElementById(id);
-    }
-
-    function openRegisterModal() {
-      registerModal.style.display = "flex";
-    }
-    function closeRegisterModal() {
-      registerModal.style.display = "none";
-    }
-    function openSuccessModal() {
-      successModal.style.display = "flex";
-    }
-    function closeSuccessModal() {
-      successModal.style.display = "none";
-    }
-    window.onclick = function (event) {
-      if (event.target === registerModal) {
-        registerModal.style.display = "none";
-      } else if (event.target === successModal) {
-        successModal.style.display = "none";
-      }
-    }
-    function register(num) {
-      var xhttp = new XMLHttpRequest();
-      var name, phone, address, message;
-      var product = "Lục bình";
-      if (num === 1) {
-        name = getById("txtName1").value.trim();
-        phone = getById("txtPhone1").value.trim();
-      } else if (num === 2) {
-        name = getById("txtName2").value.trim();
-        phone = getById("txtPhone2").value.trim();
-      }
-      if (!name || !phone) {
-        alert("Vui lòng nhập đầy đủ tên và số điện thoại");
-        return;
-      }
-      var data = {
-        name, phone, address, message, product
-      }
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 201) {
-          var json = JSON.parse(this.responseText);
-          closeRegisterModal();
-          // openSuccessModal();
-          window.location = "./cam-on.php";
-        }
-      };
-      xhttp.open("POST", REACT_APP_HOST_API + "/api/tlvc-order/create.php", true);
-      xhttp.setRequestHeader("Content-Type", "application/json");
-      xhttp.send(JSON.stringify(data));
-
-      return false;
-    }
-
-    // Restricts input for the given textbox to the given inputFilter function.
-    function setInputFilter(textbox, inputFilter) {
-      ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
-        textbox.addEventListener(event, function () {
-          if (inputFilter(this.value)) {
-            this.oldValue = this.value;
-            this.oldSelectionStart = this.selectionStart;
-            this.oldSelectionEnd = this.selectionEnd;
-          } else if (this.hasOwnProperty("oldValue")) {
-            this.value = this.oldValue;
-            this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-          } else {
-            this.value = "";
-          }
-        });
-      });
-    }
-
-    // Allow digits and '.' only, using a RegExp
-    var phoneRegex = /^[0-9. ]*$/;
-    setInputFilter(getById("txtPhone1"), function (value) {
-      return phoneRegex.test(value);
-    });
-    setInputFilter(getById("txtPhone2"), function (value) {
-      return phoneRegex.test(value);
-    });
-
-    function convertTimeValue(number) {
-      if (number < 10) return '0' + number;
-      return number;
-    }
-
-    var countdownInterval = setInterval(function () {
-      // 2:00 a.m
-      var tomorow = new Date();
-      tomorow.setHours(2);
-      tomorow.setMinutes(0);
-      tomorow.setSeconds(0);
-
-      var currentTime = new Date();
-      if (currentTime > tomorow) {
-        tomorow.setDate(tomorow.getDate() + 1);
-      }
-      // Get today's date and time
-      var now = new Date().getTime();
-
-      // Find the distance between now and the count down date
-      var distance = tomorow - now;
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Output the result in an element with id="demo"
-      document.getElementById("dd").innerHTML = convertTimeValue(days);
-      document.getElementById("hh").innerHTML = convertTimeValue(hours);
-      document.getElementById("mm").innerHTML = convertTimeValue(minutes);
-      document.getElementById("ss").innerHTML = convertTimeValue(seconds);
-      // If the count down is over, write some text 
-      if (distance < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById("expired").style.display = "block";
-        document.getElementById("dd").innerHTML = '00';
-        document.getElementById("hh").innerHTML = '00';
-        document.getElementById("mm").innerHTML = '00';
-        document.getElementById("ss").innerHTML = '00';
-      }
-    }, 1000);
-  </script>
+  <?php require '../register-modal.php' ?>
 </body>
 
 </html>

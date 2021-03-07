@@ -81,7 +81,7 @@
       <div class="sale-text">giảm chỉ còn</div>
       <div class="sale-price"><?php echo $salePrice ?></div>
     </div>
-    <img style="width: 100%;" src="./1 That Lan Von Cau.jpg" />
+    <img style="width: 100%;" src="<?php echo $imgSectionRegister ?>" />
   </div>
   <div class="register">
     <p class="register-come-on">NHANH TAY LÊN!<br />CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
@@ -120,11 +120,55 @@
   function registerOrder2() {
     var name = getById("txtName2").value.trim();
     var phone = getById("txtPhone2").value.trim();
-    var product = PRODUCT_TLVC;
+    var product = "<?php echo $product ?>";
     createOrder({
       name,
       phone,
       product
     });
   }
+
+  function convertTimeValue(number) {
+    if (number < 10) return '0' + number;
+    return number;
+  }
+
+  var countdownInterval = setInterval(function() {
+    // 2:00 a.m
+    var tomorow = new Date();
+    tomorow.setHours(2);
+    tomorow.setMinutes(0);
+    tomorow.setSeconds(0);
+
+    var currentTime = new Date();
+    if (currentTime > tomorow) {
+      tomorow.setDate(tomorow.getDate() + 1);
+    }
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = tomorow - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("dd").innerHTML = convertTimeValue(days);
+    document.getElementById("hh").innerHTML = convertTimeValue(hours);
+    document.getElementById("mm").innerHTML = convertTimeValue(minutes);
+    document.getElementById("ss").innerHTML = convertTimeValue(seconds);
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("expired").style.display = "block";
+      document.getElementById("dd").innerHTML = '00';
+      document.getElementById("hh").innerHTML = '00';
+      document.getElementById("mm").innerHTML = '00';
+      document.getElementById("ss").innerHTML = '00';
+    }
+  }, 1000);
 </script>

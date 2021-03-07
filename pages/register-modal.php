@@ -67,7 +67,7 @@
   function registerOrder1() {
     var name = getById("txtName1").value.trim();
     var phone = getById("txtPhone1").value.trim();
-    var product = PRODUCT_TLVC;
+    var product = "<?php echo $product ?>";
     createOrder({
       name,
       phone,
