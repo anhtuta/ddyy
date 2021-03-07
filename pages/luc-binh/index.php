@@ -67,7 +67,7 @@
     <div class="section-feedback">
       <div class="feedback-wrapper">
         <h2 class="feedback-label">FEEDBACK CỦA KHÁCH HÀNG</h2>
-        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/luc-binh.html" data-numposts="5"
+        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/luc-binh/" data-numposts="5"
           data-width="100%" data-colorscheme="dark"></div>
       </div>
     </div>
@@ -80,5 +80,7 @@
 
   <?php require '../register-modal.php' ?>
 </body>
+
+<script src="../static/js/register.js"></script>
 
 </html>
