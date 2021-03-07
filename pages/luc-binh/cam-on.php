@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cám ơn bạn đã gửi thông tin, chúng tôi sẽ liên lạc lại sớm nhất có thể!" />
   <title>Cảm ơn | Đúc Đồng Ý Yên</title>
-  <link rel="icon" href="./icon.png">
+  <link rel="icon" href="../static/img/icon.png">
   <style>
     body {
       margin: 0;

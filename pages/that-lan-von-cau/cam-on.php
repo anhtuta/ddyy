@@ -6,32 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cám ơn bạn đã gửi thông tin, chúng tôi sẽ liên lạc lại sớm nhất có thể!" />
   <title>Cảm ơn | Đúc Đồng Ý Yên</title>
-  <link rel="icon" href="./icon.png">
+  <link rel="icon" href="../static/img/icon.png">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
+
   <style>
     body {
-      margin: 0;
-      padding: 0;
       background: #f0f0f0;
-    }
-
-    * {
-      font-family: "Segoe UI";
-    }
-
-    a {
-      text-decoration: none;
-      color: #e74c3c;
-      transition: 0.3s;
-      font-weight: bold;
-    }
-
-    a:hover {
-      color: #fc0;
     }
 
     .page-container {
       position: relative;
-      min-height: 100vh;
+      min-height: calc(100vh - 50px); /* 50px = height of footer-wrapper */
     }
 
     .ty-wrapper {
@@ -56,22 +41,6 @@
 
     .ty-photo {
       max-width: 430px;
-    }
-
-    .site-info {
-      line-height: 50px;
-      background: #222222;
-      font-size: 0.875rem;
-      color: #ddd;
-      overflow: hidden;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-
-    .site-info-owner {
-      width: 100% !important;
-      text-align: center !important;
     }
 
     @media screen and (max-width: 570px) {
@@ -109,13 +78,9 @@
         <img style="width: 100%;" src="./2 That Lan Von Cau.jpg" />
       </div>
     </div>
-
-    <div class="site-info">
-      <div class="site-info-owner">
-        Copyright © 2020 <a href="https://xuongducdongyyen.com/" title="Đúc Đồng Ý Yên">Đúc Đồng Ý Yên</a>.
-      </div>
-    </div>
   </div>
+
+  <?php require '../footer.php' ?>
 </body>
 
 </html>

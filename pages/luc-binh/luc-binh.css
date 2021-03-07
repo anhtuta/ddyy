@@ -9,11 +9,6 @@ body {
 .tlvc-wrapper {
   text-align: center;
 }
-.header-background {
-  background-color: rgb(0 0 0 / 51%);
-  height: 600px;
-  display: flex;
-}
 
 .section-intro {
   max-width: 800px;

@@ -8,8 +8,9 @@
     content="Lục bình bằng đồng cao cấp, chế tác thủ công, tinh xảo. Miễn phí giao hàng toàn quốc, thanh toán khi nhận hàng" />
   <title>Lục bình | Đúc Đồng Ý Yên</title>
   <!-- Append a random query parameter to remove cached file each time we change css file -->
-  <link rel="stylesheet" type="text/css" href="that-lan-von-cau.css?date=20201103">
-  <link rel="icon" href="./icon.png">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
+  <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?date=20201103">
+  <link rel="icon" href="../static/img/icon.png">
 </head>
 
 <body>
@@ -22,10 +23,10 @@
     <div class="section-intro">
       <div class="tlvc-div">
         <div class="tlvc-item" style="background: #fff2bd;">
-          <img class="tlvc-image" src="./Luc-binh-header.png" />
+          <img class="tlvc-image" src="./luc-binh-header.png" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./luc-binh-3.jpg" />
+          <img class="tlvc-image" src="./luc-binh_intro.jpg" />
           <button class="first-btn-buynow btn-buynow-blink" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
@@ -101,6 +102,8 @@
         </div>
       </div>
     </div>
+
+    <?php require '../footer.php' ?>
   </div>
 
   <!-- Register Modal -->
@@ -191,7 +194,7 @@
           var json = JSON.parse(this.responseText);
           closeRegisterModal();
           // openSuccessModal();
-          window.location = "./cam-on-luc-binh.html";
+          window.location = "./cam-on.php";
         }
       };
       xhttp.open("POST", REACT_APP_HOST_API + "/api/tlvc-order/create.php", true);

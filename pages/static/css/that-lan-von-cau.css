@@ -1,28 +1,5 @@
-* {
-  font-family: "Segoe UI";
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .tlvc-wrapper {
   text-align: center;
-}
-
-.section-header {
-  background-image: url(./2\That\Lan\Von\Cau.jpg);
-  background-color: rgba(255, 255, 255, 0);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  height: 600px;
-}
-.header-background {
-  background-color: rgb(0 0 0 / 51%);
-  height: 600px;
-  display: flex;
 }
 
 .section-intro {
@@ -332,86 +309,6 @@ body {
 
 .section-register {
   background-color: #160a04;
-}
-.register-wrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: auto;
-  padding: 16px;
-}
-
-.product {
-  max-width: 380px;
-}
-
-.register {
-  max-width: 412px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 22px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-.register-come-on {
-  color: #e74c3c;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-
-#expired {
-  display: none;
-}
-
-.countdown-timer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.time-digit {
-  max-width: 120px;
-  display: flex;
-  flex-direction: column;
-  color: #333;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.time-digit .value {
-  padding: 7px;
-  background-color: #e74c3c;
-  color: white;
-  border-radius: 10px;
-  letter-spacing: 3px;
-  font-size: 40px;
-}
-
-.register-form {
-  margin-top: 32px;
-}
-
-@media screen and (max-width: 600px) {
-  .register-wrapper {
-    display: block;
-  }
-  .product,
-  .register {
-    margin-top: 24px;
-  }
-  .time-digit .value {
-    font-size: 35px;
-  }
 }
 
 .section-photos {
