@@ -1,10 +1,6 @@
 // giống value trong file .env ở project tlvc-order-fe
 // var REACT_APP_HOST_API = "http://localhost:8888"; //local
 var REACT_APP_HOST_API = "https://xuongducdongyyen.com/tlvc-api" // product
-
-var PRODUCT_TLVC = "Đỉnh thất lân vờn cầu";
-var PRODUCT_TLVC9999 = "Đỉnh thất lân vờn cầu khảm ngũ sắc giát vàng 9999";
-var PRODUCT_LUCBINH = "Lục bình";
 var phoneRegex = /^[0-9.+ ]*$/;
 
 function getById(id) {
