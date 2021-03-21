@@ -28,7 +28,7 @@ $imgSectionRegister = "./may-loc-kk-1-vn.jpg";
     <div class="section-intro">
       <div class="tlvc-div">
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-2-vn.jpg" />
+          <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg" />
           <button class="first-btn-buynow btn-buynow-blink" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
@@ -36,11 +36,19 @@ $imgSectionRegister = "./may-loc-kk-1-vn.jpg";
           <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg" />
+          <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg" />
           <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-4-vn.jpg" />
+          <img class="tlvc-image" src="./may-loc-kk-9-vn.jpg" />
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
+        </div>
+        <div class="tlvc-item">
+          <img class="tlvc-image" src="./may-loc-kk-11-vn.jpg" />
+          <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
+        </div>
+        <div class="tlvc-item">
+          <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg" />
           <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
       </div>
@@ -52,10 +60,10 @@ $imgSectionRegister = "./may-loc-kk-1-vn.jpg";
           <img src="./may-loc-kk-5.jpg">
           <img src="./may-loc-kk-6.jpg">
           <img src="./may-loc-kk-7-vn.jpg">
-          <img src="./may-loc-kk-8.jpg">
+          <img src="./may-loc-kk-9-vn.jpg">
         </div>
         <div class="column">
-          <img src="./may-loc-kk-9-vn.jpg">
+          <img src="./may-loc-kk-8.jpg">
           <img src="./may-loc-kk-10-vn.jpg">
           <img src="./may-loc-kk-11-vn.jpg">
           <img src="./may-loc-kk-4-vn.jpg">
