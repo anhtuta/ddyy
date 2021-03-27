@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cám ơn bạn đã gửi thông tin, chúng tôi sẽ liên lạc lại sớm nhất có thể!" />
-  <title>Cảm ơn | Đúc Đồng Ý Yên</title>
-  <link rel="icon" href="../static/img/icon.png">
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
-
   <style>
     body {
       background: #f0f0f0;
@@ -25,8 +15,7 @@
       max-width: 800px;
       margin: auto;
       padding: 10px;
-      padding-bottom: 50px;
-      /* Footer height */
+      padding-bottom: 50px; /* Footer height */
     }
 
     .ty-content {
@@ -36,7 +25,7 @@
 
     .ty-header {
       font-size: 2.7em;
-      color: #e74c3c;
+      color: var(--primaryColor);
     }
 
     .ty-photo {
@@ -68,10 +57,10 @@
           Cám ơn bạn đã gửi thông tin, chúng tôi sẽ liên lạc lại sớm nhất có thể!
         </p>
         <p>
-          Nếu bạn cần gấp vui lòng liên hệ <a href="tel:0835838368">0835 83 83 68</a>
+          Nếu bạn cần gấp vui lòng liên hệ <a href="tel:<?php echo $phoneNum ?>"><?php echo $phoneNum ?></a>
         </p>
         <p>
-          <a href="https://xuongducdongyyen.com">Trang chủ</a>
+          <a href="<?php echo $homePage ?>">Trang chủ</a>
         </p>
       </div>
       <div class="ty-photo">
@@ -79,8 +68,4 @@
       </div>
     </div>
   </div>
-
-  <?php require '../footer.php' ?>
 </body>
-
-</html>

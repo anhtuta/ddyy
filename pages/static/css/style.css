@@ -9,7 +9,7 @@ body {
 /* a tag */
 a {
   text-decoration: none;
-  color: #e74c3c;
+  color: var(--primaryColor);
   transition: 0.3s;
   font-weight: bold;
 }

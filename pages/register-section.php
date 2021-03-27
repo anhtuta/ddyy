@@ -21,7 +21,7 @@
   }
 
   .register-wrapper .register .register-come-on {
-    color: #e74c3c;
+    color: var(--primaryColor);
     font-weight: bold;
     font-size: 1.2em;
   }
@@ -47,7 +47,7 @@
 
   .register-wrapper .time-digit .value {
     padding: 7px;
-    background-color: #e74c3c;
+    background-color: var(--primaryColor);
     color: white;
     border-radius: 10px;
     letter-spacing: 3px;

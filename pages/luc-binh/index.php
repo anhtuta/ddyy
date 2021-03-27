@@ -12,6 +12,12 @@
   <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?date=20201103">
   <link rel="icon" href="../static/img/icon.png">
   <script src="../static/js/script.js"></script>
+  <style>
+    :root {
+      --primaryColor: #e74c3c;
+      --primaryColorHover: #ffcc00;
+    }
+  </style>
 </head>
 
 <?php

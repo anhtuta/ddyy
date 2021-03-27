@@ -8,10 +8,18 @@
   <title>Cảm ơn | Đúc Đồng Ý Yên</title>
   <link rel="icon" href="../static/img/icon.png">
   <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
+  <style>
+    :root {
+      --primaryColor: #e74c3c;
+      --primaryColorHover: #ffcc00;
+    }
+  </style>
 </head>
 
 <?php
   $imgThanks = "./2 That Lan Von Cau.jpg";
+  $phoneNum = "0835 83 83 68";
+  $homePage = "https://xuongducdongyyen.com";
 ?>
 
 <body>
