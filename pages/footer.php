@@ -14,7 +14,11 @@
 <div class="footer-wrapper">
   <div class="site-info">
     <div class="site-info-owner">
-      Copyright © <?php echo date("Y") ?> <a href="https://xuongducdongyyen.com/" title="Đúc Đồng Ý Yên">Đúc Đồng Ý Yên</a>
+      Copyright © <?php echo date("Y") ?>
+      <a href="<?php echo $footerURL ? $footerURL : "https://xuongducdongyyen.com/" ?>"
+        title="<?php echo $footerTitle ? $footerTitle : "Đúc Đồng Ý Yên" ?>">
+        <?php echo $footerTitle ? $footerTitle : "Đúc Đồng Ý Yên" ?>
+      </a>
     </div>
   </div>
 </div>
