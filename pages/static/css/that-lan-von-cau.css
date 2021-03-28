@@ -8,9 +8,9 @@
 }
 .intro-header {
   text-align: left;
-  color: var(--primaryColor);
+  color: var(--introHeaderColor);
   font-size: 2em;
-  border-bottom: 6px solid var(--primaryColor);
+  border-bottom: 6px solid var(--introHeaderColor);
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -315,7 +315,7 @@
   }
   .intro-header {
     font-size: 1.5em;
-    border-bottom: 3px solid var(--primaryColor);
+    border-bottom: 3px solid var(--introHeaderColor);
   }
 }
 

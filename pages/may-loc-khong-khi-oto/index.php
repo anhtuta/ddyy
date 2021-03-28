@@ -18,6 +18,7 @@
       --primaryColorHover: #007de0;
       --ddyyPrimary: #2199F9;
       --ddyyPrimaryHover: #007de0;
+      --introHeaderColor: #484848;
     }
   </style>
 </head>
@@ -28,6 +29,7 @@ $salePrice = "1.990.000 VNĐ";
 $product = "Máy lọc không khí";
 $imgSectionRegister = "./may-loc-kk-6.jpg";
 $phoneNum = "0354 948 368";
+$showAddressTxt = true;
 ?>
 
 <body>
@@ -69,7 +71,7 @@ $phoneNum = "0354 948 368";
           <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
         </div>
 
-        <h2 class="intro-header">3. CẤU TẠO</h2>
+        <h2 class="intro-header">3. THIẾT KẾ</h2>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg" />
           <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button>
