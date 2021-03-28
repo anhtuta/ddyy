@@ -1,29 +1,18 @@
-* {
-  font-family: "Segoe UI";
-}
-
 .tlvc-wrapper {
   text-align: center;
-}
-
-.section-header {
-  background-image: url(./2\That\Lan\Von\Cau.jpg);
-  background-color: rgba(255, 255, 255, 0);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: top center;
-  background-repeat: no-repeat;
-  height: 600px;
-}
-.header-background {
-  background-color: rgb(0 0 0 / 51%);
-  height: 600px;
-  display: flex;
 }
 
 .section-intro {
   max-width: 800px;
   display: inline-block;
+}
+.intro-header {
+  text-align: left;
+  color: var(--introHeaderColor);
+  font-size: 2em;
+  border-bottom: 6px solid var(--introHeaderColor);
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .tlvc-title {
@@ -51,7 +40,7 @@
 .first-btn-buynow {
   cursor: pointer;
   transition: 0.3s;
-  background: #e74c3c;
+  background: var(--primaryColor);
   padding: 7px 15px;
   font-size: 2.5em;
   font-weight: bold;
@@ -63,12 +52,11 @@
   position: absolute;
   bottom: 14%;
   right: 6px;
-  border: 5px solid #fc0;
+  /* border: 5px solid #fc0; */
   box-sizing: border-box;
 }
 .first-btn-buynow:hover {
   color: #FFF;
-  border: 5px solid #FFF;
 
 }
 .first-btn-buynow:focus {
@@ -142,7 +130,7 @@
 .tlvc-btn {
   cursor: pointer;
   transition: 0.3s;
-  background: #e74c3c;
+  background: var(--primaryColor);
   padding: 7px 15px;
   font-size: 1.1em;
   border: 0;
@@ -152,7 +140,7 @@
 }
 
 .tlvc-btn:hover {
-  background: #ffcc00;
+  background: var(--primaryColorHover);
 }
 
 .tlvc-btn:focus {
@@ -180,7 +168,7 @@
 .sale-price {
   font-size: 1.3em;
   font-weight: bold;
-  color: #e74c3c;
+  color: var(--primaryColor);
 }
 
 @media only screen and (max-width: 500px) {
@@ -268,7 +256,7 @@
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #e74c3c;
+  background-color: var(--primaryColor);
   color: white;
 }
 
@@ -325,94 +313,19 @@
   .modal-content {
     width: 100%;
   }
+  .intro-header {
+    font-size: 1.5em;
+    border-bottom: 3px solid var(--introHeaderColor);
+  }
 }
 
 .section-register {
   background-color: #160a04;
 }
-.register-wrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: auto;
-  padding: 16px;
-}
-
-.product {
-  max-width: 380px;
-}
-
-.register {
-  max-width: 412px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 22px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-.register-come-on {
-  color: #e74c3c;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  width: 100%;
-}
-
-#expired {
-  display: none;
-}
-
-.countdown-timer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.time-digit {
-  max-width: 120px;
-  display: flex;
-  flex-direction: column;
-  color: #333;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.time-digit .value {
-  padding: 7px;
-  background-color: #e74c3c;
-  color: white;
-  border-radius: 10px;
-  letter-spacing: 3px;
-  font-size: 40px;
-}
-
-.register-form {
-  margin-top: 32px;
-}
-
-@media screen and (max-width: 600px) {
-  .register-wrapper {
-    display: block;
-  }
-  .product,
-  .register {
-    margin-top: 24px;
-  }
-  .time-digit .value {
-    font-size: 35px;
-  }
-}
 
 .section-photos {
-  background-color: #e74c3c;
+  background-color: var(--primaryColor);
+  padding: 10px;
 }
 .photos-label {
   margin: 0;
@@ -477,4 +390,19 @@ textarea {
 .fb_iframe_widget span,
 .fb_iframe_widget iframe[style] {
   width: 100% !important;
+}
+
+.btn-buynow-blink {
+  animation: blinker 300ms infinite;
+}
+
+@keyframes blinker {
+  50% {
+    background: var(--primaryColor);
+    color: #fff;
+  }
+  100% {
+    background: #fc0;
+    color: #000;
+  }
 }
