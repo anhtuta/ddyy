@@ -7,8 +7,8 @@
   <meta name="description" content="Máy lọc không khí ô tô 3 lớp, lọc sạch không khí 360°" />
   <title>Máy lọc không khí ô tô</title>
 
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
-  <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?date=20201103">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css?v=1">
+  <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?v=1">
   <!-- <link rel="icon" href="../static/img/icon.png"> -->
   <script src="../static/js/script.js"></script>
   <script src="https://kit.fontawesome.com/60f0e96d4b.js" crossorigin="anonymous"></script>
@@ -19,6 +19,17 @@
       --ddyyPrimary: #2199F9;
       --ddyyPrimaryHover: #007de0;
       --introHeaderColor: #484848;
+    }
+    @keyframes blinker {
+      50% {
+        background: #2199F9;
+        color: #fff;
+      }
+
+      100% {
+        background: #fc0;
+        color: #000;
+      }
     }
   </style>
 </head>
@@ -122,12 +133,11 @@ $showAddressTxt = true;
     <div class="section-register">
       <?php require '../register-section.php'; ?>
     </div>
-
-    <?php //require '../footer.php' ?>
   </div>
 
   <?php require '../register-modal.php' ?>
-  <?php require '../call-now.php' ?>
+  <?php require '../btn-call-now.php' ?>
+  <?php require '../btn-buy-now.php' ?>
 </body>
 
 <script src="../static/js/register.js"></script>

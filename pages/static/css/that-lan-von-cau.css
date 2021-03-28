@@ -370,13 +370,9 @@
   }
 }
 
-.section-feedback {
-  /* background: #000; */
-}
 .feedback-wrapper {
   max-width: 800px;
   margin: auto;
-  /* color: #FFF; */
 }
 .feedback-label {
   margin: 0;
@@ -398,7 +394,7 @@
 
 @keyframes blinker {
   50% {
-    background: var(--primaryColor);
+    background: #e74c3c;
     color: #fff;
   }
   100% {
