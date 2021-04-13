@@ -8,37 +8,49 @@
     padding: 10px;
     /* width: 100%; */
   }
+
   .sticky-message .text {
     display: inline-block;
-    /* white-space: nowrap; */
-    /* animation: floatText 10s infinite linear; */
-    /* padding-left: 100%; */
-    color: #fff;
-    background: #1f1f1f6b;
+    color: #000;
+    background: #f0f2f5e3;
     padding: 10px;
     border-radius: 10px;
     font-size: 0.9em;
+    position: relative;
   }
 
   .sticky-message .text:hover {
     animation-play-state: paused;
   }
 
-  @keyframes floatText {
-    to {
-      transform: translateX(-100%);
+  .text-animation {
+    animation: showup 1s;
+  }
+
+  @keyframes showup {
+    0% {
+      top: -50px;
+      opacity: 0;
     }
+
+    100% {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+
+  .icon-like {
+    color: #2199f9;
+  }
+  .icon-love {
+    color: red;
   }
 </style>
 
-<div class="sticky-message">
-  <div class="text">
-    <i class="fa fa-thumbs-up faa-bounce animated"></i>&nbsp;<span id="comment-text"></span>
-  </div>
-</div>
+<div class="sticky-message" id="sticky-message"></div>
 
 <script>
-  var commentText = document.getElementById("comment-text");
+  var stickyMessage = document.getElementById("sticky-message");
   var msgs = [
     "Ông Nguyễn Đình Điệp (đã mua hàng): Sản phẩm cực tốt, mỗi tội kêu hơi điếc tai!",
     "Cụ Ngu Văn Ngốc (vừa mua tuần trước): Không khí lọc xong thơm tho hơn hẳn, tôi rất thích",
@@ -49,8 +61,19 @@
     "Chung: Được người chị giới thiệu nên cũng yên tâm. Đúng là ngon bổ rẻ. Không khí xe trong lành hơn hẳn. Một ít tiền cho sức khỏe",
     "Tú: Sản phẩm tuyệt nhé các bạn!"
   ];
-  commentText.innerHTML = msgs[Math.floor(Math.random() * msgs.length)];
+  var iconClasses = [
+    "fa-thumbs-up icon-like",
+    "fa-heart icon-love",
+    "fa-kiss-wink-heart icon-love"
+  ]
+
   setInterval(() => {
-    commentText.innerHTML = msgs[Math.floor(Math.random() * msgs.length)];
+    let randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
+    let iconClass = iconClasses[Math.floor(Math.random() * iconClasses.length)];
+    stickyMessage.innerHTML = `
+      <div class="text text-animation">
+        <i class="fas ${iconClass} faa-bounce animated"></i>&nbsp;<span>${randomMsg}</span>
+      </div>
+    `;
   }, 5000);
 </script>
