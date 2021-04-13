@@ -7,10 +7,10 @@
   <meta name="description" content="Máy lọc không khí ô tô 3 lớp, lọc sạch không khí 360°" />
   <title>Máy lọc không khí ô tô</title>
 
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css?v=1">
-  <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?v=1">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?v=1">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=1">
   <link rel="icon" href="Logo.png">
-  <script src="../static/js/script.js"></script>
+  <script src="../common/static/js/script.js"></script>
   <script src="https://kit.fontawesome.com/60f0e96d4b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
 
@@ -134,17 +134,17 @@ $footerTitle = "Tiêu dùng thông minh";
       </div>
     </div>
     <div class="section-register">
-      <?php require '../register-section.php'; ?>
+      <?php require '../common/register-section.php'; ?>
     </div>
   </div>
 
-  <?php require '../register-modal.php' ?>
-  <?php require '../btn-call-now.php' ?>
+  <?php require '../common/register-modal.php' ?>
+  <?php require '../common/btn-call-now.php' ?>
   <?php require '../common/btn-buy-now.php' ?>
-  <?php require '../footer.php' ?>
-  <?php require '../sticky-comment.php' ?>
+  <?php require '../common/footer.php' ?>
+  <?php require '../common/sticky-comment.php' ?>
 </body>
 
-<script src="../static/js/register.js"></script>
+<script src="../common/static/js/register.js"></script>
 
 </html>

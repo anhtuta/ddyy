@@ -1,52 +1,52 @@
-<head>
-  <style>
-    body {
-      background: #f0f0f0;
-    }
+<style>
+  body {
+    background: #f0f0f0;
+  }
 
-    .page-container {
-      position: relative;
-      min-height: calc(100vh - 50px); /* 50px = height of footer-wrapper */
-    }
+  .page-container {
+    position: relative;
+    min-height: calc(100vh - 50px);
+    /* 50px = height of footer-wrapper */
+  }
 
+  .ty-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 50px;
+    /* Footer height */
+  }
+
+  .ty-content {
+    max-width: 350px;
+    min-width: 30%;
+  }
+
+  .ty-header {
+    font-size: 2.7em;
+    color: var(--primaryColor);
+  }
+
+  .ty-photo {
+    max-width: 430px;
+  }
+
+  @media screen and (max-width: 570px) {
     .ty-wrapper {
-      display: flex;
-      justify-content: space-between;
-      max-width: 800px;
-      margin: auto;
-      padding: 10px;
-      padding-bottom: 50px; /* Footer height */
+      display: block;
     }
 
     .ty-content {
-      max-width: 350px;
-      min-width: 30%;
-    }
-
-    .ty-header {
-      font-size: 2.7em;
-      color: var(--primaryColor);
+      max-width: 100%;
     }
 
     .ty-photo {
-      max-width: 430px;
+      max-width: 100%;
     }
-
-    @media screen and (max-width: 570px) {
-      .ty-wrapper {
-        display: block;
-      }
-
-      .ty-content {
-        max-width: 100%;
-      }
-
-      .ty-photo {
-        max-width: 100%;
-      }
-    }
-  </style>
-</head>
+  }
+</style>
 
 <body>
   <div class="page-container">

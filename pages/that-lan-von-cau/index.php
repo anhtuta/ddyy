@@ -7,10 +7,10 @@
   <meta name="description" content="Đỉnh thất lân vờn cầu bằng đồng cao cấp, chế tác thủ công, tinh xảo. Miễn phí giao hàng toàn quốc, thanh toán khi nhận hàng" />
   <title>Đỉnh Thất Lân Vờn Cầu | Đúc Đồng Ý Yên</title>
   <!-- Append a random query parameter to remove cached file each time we change css file -->
-  <link rel="stylesheet" type="text/css" href="../static/css/style.css?date=20210306">
-  <link rel="stylesheet" type="text/css" href="../static/css/that-lan-von-cau.css?date=20201103">
-  <link rel="icon" href="../static/img/icon.png">
-  <script src="../static/js/script.js"></script>
+  <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?date=20210306">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?date=20201103">
+  <link rel="icon" href="../common/static/img/icon.png">
+  <script src="../common/static/js/script.js"></script>
   <style>
     :root {
       --primaryColor: #e74c3c;
@@ -79,15 +79,15 @@
       </div>
     </div>
     <div class="section-register">
-      <?php require '../register-section.php'; ?>
+      <?php require '../common/register-section.php'; ?>
     </div>
 
-    <?php require '../footer.php' ?>
+    <?php require '../common/footer.php' ?>
   </div>
 
-  <?php require '../register-modal.php' ?>
+  <?php require '../common/register-modal.php' ?>
 </body>
 
-<script src="../static/js/register.js"></script>
+<script src="../common/static/js/register.js"></script>
 
 </html>

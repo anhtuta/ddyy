@@ -9,7 +9,7 @@
       <p class="sub-title">Nhận ưu đãi khi mua hàng ngay hôm nay</p>
       <input class="input-text" required id="txtName1" placeholder="Họ tên" name="name" />
       <input class="input-text" required id="txtPhone1" placeholder="Nhập số điện thoại" name="phone" />
-      <?php if($showAddressTxt) {?><input class="input-text" required id="txtAddress1" placeholder="Địa chỉ" name="address" /><?php } ?>
+      <?php if(isset($showAddressTxt)) {?><input class="input-text" required id="txtAddress1" placeholder="Địa chỉ" name="address" /><?php } ?>
     </div>
     <div class="modal-footer">
       <button class="btn btn-success" onclick="registerOrder1()">Hoàn tất đăng ký</button>

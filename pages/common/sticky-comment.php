@@ -24,12 +24,6 @@
     animation-play-state: paused;
   }
 
-  .sticky-message .text .fa-thumbs-up {
-    color: #2199f9;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
-  }
-
   @keyframes floatText {
     to {
       transform: translateX(-100%);
@@ -59,5 +53,4 @@
   setInterval(() => {
     commentText.innerHTML = msgs[Math.floor(Math.random() * msgs.length)];
   }, 5000);
-  // commentText.innerHTML = msgs[msgs.length - 1];
 </script>

@@ -107,7 +107,7 @@
     <div class="register-form">
       <input class="input-text" required id="txtName2" placeholder="Họ tên" name="name" />
       <input class="input-text" required id="txtPhone2" placeholder="Nhập số điện thoại" name="phone" />
-      <?php if($showAddressTxt) {?><input class="input-text" required id="txtAddress2" placeholder="Địa chỉ" name="address" /><?php } ?>
+      <?php if(isset($showAddressTxt)) {?><input class="input-text" required id="txtAddress2" placeholder="Địa chỉ" name="address" /><?php } ?>
       <button class="btn btn-success" onclick="registerOrder2()">NHẬN ƯU ĐÃI</button>
     </div>
   </div>
