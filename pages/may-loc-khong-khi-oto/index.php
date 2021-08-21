@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?v=1">
   <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=2">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/phone.css">
   <link rel="icon" href="Logo.png">
   <script src="../common/static/js/script.js"></script>
   <script src="https://kit.fontawesome.com/60f0e96d4b.js" crossorigin="anonymous"></script>
