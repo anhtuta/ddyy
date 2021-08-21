@@ -61,55 +61,44 @@ $footerTitle = "Tiêu dùng thông minh";
         <h2 class="intro-header">1. BỘ LỌC 3 LỚP</h2>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-1-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-22-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-18-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
 
         <h2 class="intro-header">2. HIỂN THỊ</h2>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-11-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-16-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
 
         <h2 class="intro-header">3. THIẾT KẾ</h2>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
 
         <h2 class="intro-header">4. CẢM ỨNG TỰ ĐỘNG</h2>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-9-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-13-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
 
         <h2 class="intro-header">5. THÔNG SỐ KỸ THUẬT</h2>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-17-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-14-vn.jpg?v=1" />
-          <!-- <button class="tlvc-btn" onClick="openRegisterModal()">Mua ngay</button> -->
         </div>
       </div>
     </div>
