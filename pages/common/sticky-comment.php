@@ -42,6 +42,7 @@
   .icon-like {
     color: #2199f9;
   }
+
   .icon-love {
     color: red;
   }
@@ -53,24 +54,33 @@
   var stickyMessage = document.getElementById("sticky-message");
   var msgs = [
     "Ông Nguyễn Đình Điệp (đã mua hàng): Sản phẩm tốt",
-"Ông Trần Tuấn Dũng (vừa mua hàng tuần trước): Không khí lọc xong thơm tho hơn hẳn, tôi rất thích",
-"Bà Trần Thị Lan: Tôi mua tặng Chồng, có hét được thuốc lá trên xe không?<br/>Shop: Sản phẩm lọc không khí bụi mịn trên ô hút thuốc lá trên ô tô thỏa mái nhé anh chị.",
-"Cô Phạm Thị Mỹ Lệ: Đẹp, nhân viên phục vụ tốt, thích cực! Sẽ ủng hộ thêm ạ. Mn tham khảo mua nhé, rất đáng tiền ạ",
-"Ông Nguyễn Văn Độ: Cảm giác không khí trong lành ở trong xe. Vợ mình viêm mũi dị ứng sử dụng máy lọc thấy hiệu quả rõ rệt - đỡ hắt xì mỗi khi ngồi trong xe",
-"Cô Loan: Sản phẩm tốt đáng đồng tiền bát gạo khi mua, bé nhà mình ngủ trong xe ngon hẳn, máy chạy êm, nhẹ nhàng",
-"Anh Chung: Được người chị giới thiệu nên cũng yên tâm. Đúng là ngon bổ rẻ. Không khí xe trong lành hơn hẳn. Một ít tiền cho sức khỏe",
-"Ông Mã Văn Tài (đã mua hàng): Dùng ngon, hút thuốc lá trên ô tô thỏa mái không có mùi, máy lọc tốt!",
-"Ông Trần Đức (đã mua hàng): Xe bán tải dùng ngon lắm, nhìn sang trọng hẳn xe luôn",
-"Ông Đỗ Tiệp (đã mua hàng): Hàng check ok đúng chính hãng, yên tâm mua đi các bác"
+    "Ông Trần Tuấn Dũng (vừa mua hàng tuần trước): Không khí lọc xong thơm tho hơn hẳn, tôi rất thích",
+    "Bà Trần Thị Lan: Tôi mua tặng Chồng, có hét được thuốc lá trên xe không?<br/>Shop: Sản phẩm lọc không khí bụi mịn trên ô hút thuốc lá trên ô tô thỏa mái nhé anh chị.",
+    "Cô Phạm Thị Mỹ Lệ: Đẹp, nhân viên phục vụ tốt, thích cực! Sẽ ủng hộ thêm ạ. Mn tham khảo mua nhé, rất đáng tiền ạ",
+    "Ông Nguyễn Văn Độ: Cảm giác không khí trong lành ở trong xe. Vợ mình viêm mũi dị ứng sử dụng máy lọc thấy hiệu quả rõ rệt - đỡ hắt xì mỗi khi ngồi trong xe",
+    "Cô Loan: Sản phẩm tốt đáng đồng tiền bát gạo khi mua, bé nhà mình ngủ trong xe ngon hẳn, máy chạy êm, nhẹ nhàng",
+    "Anh Chung: Được người chị giới thiệu nên cũng yên tâm. Đúng là ngon bổ rẻ. Không khí xe trong lành hơn hẳn. Một ít tiền cho sức khỏe",
+    "Ông Mã Văn Tài (đã mua hàng): Dùng ngon, hút thuốc lá trên ô tô thỏa mái không có mùi, máy lọc tốt!",
+    "Ông Trần Đức (đã mua hàng): Xe bán tải dùng ngon lắm, nhìn sang trọng hẳn xe luôn",
+    "Ông Đỗ Tiệp (đã mua hàng): Hàng check ok đúng chính hãng, yên tâm mua đi các bác"
   ];
   var iconClasses = [
     "fa-thumbs-up icon-like",
     "fa-heart icon-love",
     "fa-kiss-wink-heart icon-love"
   ]
+  var currentIdx = -1;
 
   setInterval(() => {
-    let randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
+    let randomInx;
+    while(true) {
+      randomInx = Math.floor(Math.random() * msgs.length);
+      if(randomInx != currentIdx) {
+        currentIdx = randomInx;
+        break;
+      }
+    }
+    let randomMsg = msgs[randomInx];
     let iconClass = iconClasses[Math.floor(Math.random() * iconClasses.length)];
     stickyMessage.innerHTML = `
       <div class="text text-animation">
