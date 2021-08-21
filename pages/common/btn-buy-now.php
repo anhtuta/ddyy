@@ -32,7 +32,7 @@
   }
 
   .bn-blink {
-    animation: bn-blinker 300ms infinite;
+    animation: bn-blinker 600ms infinite;
   }
 </style>
 

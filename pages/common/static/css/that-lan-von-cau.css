@@ -389,7 +389,7 @@
 }
 
 .btn-buynow-blink {
-  animation: blinker 300ms infinite;
+  animation: blinker 600ms infinite;
 }
 
 @keyframes blinker {

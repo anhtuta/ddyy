@@ -8,7 +8,7 @@
   <title>Máy lọc không khí ô tô</title>
 
   <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?v=1">
-  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=1">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=2">
   <link rel="icon" href="Logo.png">
   <script src="../common/static/js/script.js"></script>
   <script src="https://kit.fontawesome.com/60f0e96d4b.js" crossorigin="anonymous"></script>
@@ -127,12 +127,12 @@ $footerTitle = "Tiêu dùng thông minh";
         </div>
       </div>
     </div>
-    <div class="section-feedback">
+    <!-- div class="section-feedback">
       <div class="feedback-wrapper">
         <h2 class="feedback-label">FEEDBACK CỦA KHÁCH HÀNG</h2>
         <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/may-loc-khong-khi-oto/" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
       </div>
-    </div>
+    </div-->
     <div class="section-register">
       <?php require '../common/register-section.php'; ?>
     </div>
