@@ -120,7 +120,7 @@ $footerTitle = "Tiêu dùng thông minh";
     <!-- div class="section-feedback">
       <div class="feedback-wrapper">
         <h2 class="feedback-label">FEEDBACK CỦA KHÁCH HÀNG</h2>
-        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/may-loc-khong-khi-oto/" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
+        <div class="fb-comments" data-href="http://ducdongyyen.com/pages/may-loc-khong-khi-oto/" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
       </div>
     </div-->
     <div class="section-register">

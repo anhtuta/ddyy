@@ -70,7 +70,7 @@
     <div class="section-feedback">
       <div class="feedback-wrapper">
         <h2 class="feedback-label">FEEDBACK CỦA KHÁCH HÀNG</h2>
-        <div class="fb-comments" data-href="http://xuongducdongyyen.com/pages/vong-go-bach-xanh/" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
+        <div class="fb-comments" data-href="http://ducdongyyen.com/pages/vong-go-bach-xanh/" data-numposts="5" data-width="100%" data-colorscheme="dark"></div>
       </div>
     </div>
     <div class="section-register">

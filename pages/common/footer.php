@@ -15,7 +15,7 @@
   <div class="site-info">
     <div class="site-info-owner">
       Copyright © <?php echo date("Y") ?>
-      <a href="<?php echo isset($footerTitle) ? $footerURL : "https://xuongducdongyyen.com/" ?>"
+      <a href="<?php echo isset($footerTitle) ? $footerURL : "https://ducdongyyen.com/" ?>"
         title="<?php echo isset($footerTitle) ? $footerTitle : "Đúc Đồng Ý Yên" ?>">
         <?php echo isset($footerTitle) ? $footerTitle : "Đúc Đồng Ý Yên" ?>
       </a>

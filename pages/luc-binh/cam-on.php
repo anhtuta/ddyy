@@ -19,7 +19,7 @@
 <?php
   $imgThanks = "./luc-binh-3.jpg";
   $phoneNum = "0835 83 83 68";
-  $homePage = "https://xuongducdongyyen.com";
+  $homePage = "https://ducdongyyen.com";
 ?>
 
 <body>
