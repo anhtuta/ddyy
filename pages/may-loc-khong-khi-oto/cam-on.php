@@ -16,13 +16,13 @@
 </head>
 
 <?php
-  $imgThanks = "./may-loc-kk-6.jpg";
+  $imgThanks = "./may-loc-kk-6-vn.jpg";
   $phoneNum = "0354 948 368";
   $homePage = "/";
 ?>
 
 <body>
-  <?php require '../thanks.php' ?>
+  <?php require '../common/thanks.php' ?>
 </body>
 
 </html>

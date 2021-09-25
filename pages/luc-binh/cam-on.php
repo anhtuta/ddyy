@@ -23,7 +23,7 @@
 ?>
 
 <body>
-  <?php require '../thanks.php' ?>
+  <?php require '../common/thanks.php' ?>
   <?php require '../common/footer.php' ?>
 </body>
 

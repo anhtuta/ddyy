@@ -12,10 +12,12 @@
 
 <?php
   $imgThanks = "./vong-go-1.jpg";
+  $phoneNum = "0354 948 368";
+  $homePage = "https://ducdongyyen.com";
 ?>
 
 <body>
-  <?php require '../thanks.php' ?>
+  <?php require '../common/thanks.php' ?>
   <?php require '../common/footer.php' ?>
 </body>
 

@@ -13,7 +13,7 @@ function createOrder(data) {
       window.location = "./cam-on.php";
     }
   };
-  xhttp.open("POST", REACT_APP_HOST_API + "/api/tlvc-order/create.php", true);
+  xhttp.open("POST", REACT_APP_HOST_API + "/api/landing/order", true);
   xhttp.setRequestHeader("Content-Type", "application/json");
   xhttp.send(JSON.stringify(data));
 }
