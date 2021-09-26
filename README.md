@@ -48,3 +48,10 @@
   + Giúp user load web nhanh hơn do chỉ cần load cache từ cloudflare
   + Giảm tải tới host
 - Nếu như cloudflare check mà ko thấy cache của trang web trên server của nó, thì nó sẽ request tới host, nên lần đầu tiên truy cập vào website sẽ khá chậm do chưa có cache
+
+# How to deploy landing page
+Landing page là các page trong thư mục `pages`, mỗi 1 sản phẩm sẽ có 1 thư mục cho sp đó, và thư mục common (tức là thư mục common dùng chung cho mọi sp). Muốn deploy lên host chỉ cần copy thư mục sản phẩm đó + thư mục common là xong.
+
+VD: muốn deploy sp máy lọc kk thì copy 2 thư mục sau: `may-loc-khong-khi-oto`, `common`
+
+Nhớ sửa biến `REACT_APP_HOST_API` trong file `common/static/js/script.js` cho đúng với môi trường product

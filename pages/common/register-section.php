@@ -121,7 +121,7 @@
   function registerOrder2() {
     var name = getById("txtName2").value.trim();
     var phone = getById("txtPhone2").value.trim();
-    var address = getById("txtAddress2").value.trim();
+    var address = getById("txtAddress2") ? getById("txtAddress2").value.trim() : null;
     var product = "<?php echo $product ?>";
     createOrder({
       name,
