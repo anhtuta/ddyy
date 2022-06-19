@@ -77,7 +77,7 @@ $footerTitle = "Tiêu dùng thông minh";
 
 <body>
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=3121891904569704&autoLogAppEvents=1" nonce="Q8AahtUw"></script>
+  <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=3121891904569704&autoLogAppEvents=1" nonce="Q8AahtUw"></script> -->
 
   <div class="tlvc-wrapper">
     <div class="section-intro" style="margin-top: 70px;">
@@ -86,53 +86,53 @@ $footerTitle = "Tiêu dùng thông minh";
           <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg?v=2" />
           <div class="price-inner-image">
             <?php require '../common/price.php' ?>
-            <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('section-register'), 1000)">Nhận ưu đãi</button>
+            <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
           </div>
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=2" />
           <div class="offer-inner-image">
-            <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('section-register'), 1000)">Nhận ưu đãi</button>
+            <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
           </div>
         </div>
         <h2 class="intro-header">1. BỘ LỌC 3 LỚP</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-1-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-1-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-22-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-22-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-18-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-18-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">2. HIỂN THỊ</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-11-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-11-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-16-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-16-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">3. THIẾT KẾ</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">4. CẢM ỨNG TỰ ĐỘNG</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-9-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-9-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-13-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-13-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">5. THÔNG SỐ KỸ THUẬT</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-17-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-17-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-14-vn.jpg?v=1" />
+          <img class="tlvc-image" src="./may-loc-kk-14-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
       </div>
     </div>
@@ -140,14 +140,14 @@ $footerTitle = "Tiêu dùng thông minh";
       <h2 class="photos-label">HÌNH ẢNH SẢN PHẨM</h2>
       <div class="column-wrapper">
         <div class="column">
-          <img src="./may-loc-kk-6-vn.jpg?v=1">
-          <img src="./may-loc-kk-5-vn.jpg?v=1">
-          <img src="./may-loc-kk-7-vn.jpg?v=1">
+          <img src="./may-loc-kk-6-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-5-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-7-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
         <div class="column">
-          <img src="./may-loc-kk-8-vn.jpg?v=1">
-          <img src="./may-loc-kk-23-vn.jpg?v=1">
-          <img src="./may-loc-kk-15-vn.jpg?v=1">
+          <img src="./may-loc-kk-8-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-23-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-15-vn.jpg?v=1" alt="máy lọc không khí" />
         </div>
       </div>
     </div>
