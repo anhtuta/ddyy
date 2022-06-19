@@ -12,7 +12,7 @@
       <?php if(isset($showAddressTxt)) {?><input class="input-text" required id="txtAddress1" placeholder="Địa chỉ" name="address" /><?php } ?>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-success" onclick="registerOrder1()">Hoàn tất đăng ký</button>
+      <button class="btn btn-success" onclick="registerOrder1()">Hoàn tất đặt hàng</button>
     </div>
   </div>
 </div>

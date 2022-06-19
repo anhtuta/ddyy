@@ -32,10 +32,13 @@
 
 .tlvc-div {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .tlvc-item {
   position: relative;
+  display: inline-block;
 }
 .first-btn-buynow {
   cursor: pointer;
@@ -56,8 +59,7 @@
   box-sizing: border-box;
 }
 .first-btn-buynow:hover {
-  color: #FFF;
-
+  color: #fff;
 }
 .first-btn-buynow:focus {
   outline: 0;
@@ -389,16 +391,39 @@
 }
 
 .btn-buynow-blink {
-  animation: blinker 600ms infinite;
+  animation: blinker 1000ms infinite;
 }
 
 @keyframes blinker {
+  0% {
+    background: #fc0;
+    color: #000;
+  }
   50% {
     background: #e74c3c;
     color: #fff;
   }
   100% {
     background: #fc0;
+    color: #000;
+  }
+}
+
+.btn-buynow-blink-green-white {
+  animation: blinker-gw 1000ms infinite;
+}
+
+@keyframes blinker-gw {
+  0% {
+    background: #fff;
+    color: #000;
+  }
+  50% {
+    background: #129830;
+    color: #fff;
+  }
+  100% {
+    background: #fff;
     color: #000;
   }
 }
