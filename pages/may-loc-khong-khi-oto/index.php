@@ -37,28 +37,16 @@
     }
 
     /* Ref: https://www.w3schools.com/howto/howto_css_responsive_text.asp */
-    .price-inner-image {
-      position: absolute;
-      top: 39%;
-      right: 6%;
-    }
-
-    .price-inner-image .price {
-      font-size: 1.5em;
-    }
-
-    .price-inner-image .btn,
-    .offer-inner-image .btn {
-      display: block;
-      margin: 0;
-      margin-left: auto;
-      font-size: 2em;
-    }
-
+    /* Update: this ref doesn't work if img width = 100% */
     .offer-inner-image {
       position: absolute;
-      top: 86%;
-      left: 6%;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .offer-inner-image .btn {
+      font-size: 1.3em;
     }
 
   </style>
@@ -83,17 +71,16 @@ $footerTitle = "Tiêu dùng thông minh";
     <div class="section-intro" style="margin-top: 70px;">
       <div class="tlvc-div">
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg?v=2" />
-          <div class="price-inner-image">
-            <?php require '../common/price.php' ?>
+          <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg?v=3" alt="máy lọc không khí" />
+          <div class="offer-inner-image">
             <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
           </div>
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=2" />
-          <div class="offer-inner-image">
-            <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
-          </div>
+          <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=2" alt="máy lọc không khí" />
+        </div>
+        <div class="tlvc-item">
+          <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
         </div>
         <h2 class="intro-header">1. BỘ LỌC 3 LỚP</h2>
         <div class="tlvc-item">
