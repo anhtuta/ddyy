@@ -39,10 +39,8 @@
     /* Ref: https://www.w3schools.com/howto/howto_css_responsive_text.asp */
     .price-inner-image {
       position: absolute;
-      font-size: 1.5vw;
       top: 39%;
       right: 6%;
-      color: #fff;
     }
 
     .price-inner-image .price {
@@ -59,7 +57,6 @@
 
     .offer-inner-image {
       position: absolute;
-      font-size: 1.5vw;
       top: 86%;
       left: 6%;
     }
