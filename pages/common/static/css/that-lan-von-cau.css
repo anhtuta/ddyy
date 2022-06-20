@@ -409,7 +409,7 @@
   }
 }
 
-.btn-buynow-blink-green-white {
+.btn-buynow-blink-gw {
   animation: blinker-gw 1000ms infinite;
 }
 
@@ -425,5 +425,24 @@
   100% {
     background: #fff;
     color: #000;
+  }
+}
+
+/* bigger smaller */
+.btn-buynow-blink-bs {
+  background: #129830;
+  color: #fff;
+  animation: blink-bs 1000ms infinite;
+}
+
+@keyframes blink-bs {
+  0% {
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.1);
+  }
+  100% {
+    transform:scale(1);
   }
 }

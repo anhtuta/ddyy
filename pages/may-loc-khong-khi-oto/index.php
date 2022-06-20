@@ -8,7 +8,7 @@
   <title>Máy lọc không khí ô tô</title>
 
   <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?v=2">
-  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=3">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=5">
   <link rel="stylesheet" type="text/css" href="../common/static/css/phone.css">
   <link rel="icon" href="Logo.png">
   <script src="../common/static/js/script.js?v=1"></script>
@@ -73,14 +73,14 @@ $footerTitle = "Tiêu dùng thông minh";
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg?v=3" alt="máy lọc không khí" />
           <div class="offer-inner-image">
-            <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
+            <button class="btn btn-success btn-buynow-blink-gw" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
           </div>
         </div>
         <div class="tlvc-item">
           <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=2" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <button class="btn btn-success btn-buynow-blink-green-white" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
+          <button class="btn btn-success btn-buynow-blink-bs" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
         </div>
         <h2 class="intro-header">1. BỘ LỌC 3 LỚP</h2>
         <div class="tlvc-item">

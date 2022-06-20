@@ -4,9 +4,9 @@
     z-index: 2000;
     top: 0;
     left: 0;
-    /* background: #1f1f1f6b; */
-    padding: 10px;
-    /* width: 100%; */
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
   }
 
   .sticky-message .text {
@@ -14,6 +14,7 @@
     color: #000;
     background: #f0f2f5e3;
     padding: 10px;
+    margin: 5px;
     border-radius: 10px;
     font-size: 0.9em;
     position: relative;
