@@ -7,11 +7,11 @@
   <meta name="description" content="Máy lọc không khí ô tô 3 lớp, lọc sạch không khí 360°" />
   <title>Máy lọc không khí ô tô</title>
 
-  <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?v=2">
-  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=5">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/style.css?v=6">
+  <link rel="stylesheet" type="text/css" href="../common/static/css/that-lan-von-cau.css?v=6">
   <link rel="stylesheet" type="text/css" href="../common/static/css/phone.css">
   <link rel="icon" href="Logo.png">
-  <script src="../common/static/js/script.js?v=1"></script>
+  <script src="../common/static/js/script.js?v=6"></script>
   <script src="https://kit.fontawesome.com/60f0e96d4b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
 
@@ -56,7 +56,7 @@
 $originalPrice = "3.600.000 VNĐ";
 $salePrice = "1.990.000 VNĐ";
 $product = "Máy lọc không khí";
-$imgSectionRegister = "./may-loc-kk-6-vn.jpg?v=1";
+$imgSectionRegister = "./may-loc-kk-6-vn.jpg?v=6";
 $phoneNum = "0354 948 368";
 $showAddressTxt = true;
 $footerURL = "#";
@@ -71,55 +71,55 @@ $footerTitle = "Tiêu dùng thông minh";
     <div class="section-intro" style="margin-top: 70px;">
       <div class="tlvc-div">
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg?v=3" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-3-vn.jpg?v=6" alt="máy lọc không khí" />
           <div class="offer-inner-image">
             <button class="btn btn-success btn-buynow-blink-gw" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
           </div>
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=2" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-7-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
           <button class="btn btn-success btn-buynow-blink-bs" onclick="scrollPage(getByClass('register-form'), 1000)">Nhận ưu đãi</button>
         </div>
         <h2 class="intro-header">1. BỘ LỌC 3 LỚP</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-1-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-1-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-22-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-22-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-18-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-18-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">2. HIỂN THỊ</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-11-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-11-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-16-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-16-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">3. THIẾT KẾ</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-10-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">4. CẢM ỨNG TỰ ĐỘNG</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-9-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-9-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-13-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-13-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
 
         <h2 class="intro-header">5. THÔNG SỐ KỸ THUẬT</h2>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-17-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-17-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="tlvc-item">
-          <img class="tlvc-image" src="./may-loc-kk-14-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img class="tlvc-image" src="./may-loc-kk-14-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
       </div>
     </div>
@@ -127,14 +127,14 @@ $footerTitle = "Tiêu dùng thông minh";
       <h2 class="photos-label">HÌNH ẢNH SẢN PHẨM</h2>
       <div class="column-wrapper">
         <div class="column">
-          <img src="./may-loc-kk-6-vn.jpg?v=1" alt="máy lọc không khí" />
-          <img src="./may-loc-kk-5-vn.jpg?v=1" alt="máy lọc không khí" />
-          <img src="./may-loc-kk-7-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-6-vn.jpg?v=6" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-5-vn.jpg?v=6" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-7-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
         <div class="column">
-          <img src="./may-loc-kk-8-vn.jpg?v=1" alt="máy lọc không khí" />
-          <img src="./may-loc-kk-23-vn.jpg?v=1" alt="máy lọc không khí" />
-          <img src="./may-loc-kk-15-vn.jpg?v=1" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-8-vn.jpg?v=6" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-23-vn.jpg?v=6" alt="máy lọc không khí" />
+          <img src="./may-loc-kk-15-vn.jpg?v=6" alt="máy lọc không khí" />
         </div>
       </div>
     </div>
