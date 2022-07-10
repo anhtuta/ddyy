@@ -20,10 +20,17 @@
     box-sizing: border-box;
   }
 
-  .register-wrapper .register .register-come-on {
+  .register-wrapper .register .register-free-ship {
     color: var(--primaryColor);
     font-weight: bold;
     font-size: 1.2em;
+  }
+
+  .register-wrapper .register .register-come-on {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: red;
   }
 
   .register-wrapper .register #expired {
@@ -84,7 +91,8 @@
     <img style="width: 100%;" src="<?php echo $imgSectionRegister ?>" alt="" />
   </div>
   <div class="register">
-    <p class="register-come-on">NHANH TAY LÊN!<br />CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
+    <div class="register-free-ship"><i class="fa fa-truck"></i> MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC</div>
+    <p id="hurry-up-label" class="register-come-on">NHANH TAY LÊN!<br />CHƯƠNG TRÌNH SẮP KẾT THÚC</p>
     <div class="countdown-timer">
       <div id="expired">Chương trình khuyến mãi đã kết thúc</div>
       <div class="time-digit">
@@ -121,6 +129,10 @@
   function registerOrder2() {
     var name = getById("txtName2").value.trim();
     var phone = getById("txtPhone2").value.trim();
+    if(!validatePhone(phone)) {
+      alert('Số điện thoại KHÔNG hợp lệ, xin vui lòng nhập lại!');
+      return;
+    }
     var address = getById("txtAddress2") ? getById("txtAddress2").value.trim() : null;
     var product = "<?php echo $product ?>";
     createOrder({

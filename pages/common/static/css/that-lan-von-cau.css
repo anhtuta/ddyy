@@ -321,12 +321,12 @@
   }
 }
 
-.section-register {
-  background-color: #160a04;
-}
-
-.section-photos {
+.section-register, .section-map, .section-photos, .section-address {
   background-color: var(--primaryColor);
+  padding: 10px;
+}
+.section-feedback {
+  background-color: #160a04;
   padding: 10px;
 }
 .photos-label {
@@ -352,6 +352,49 @@
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+}
+
+.row-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.row-wrapper .row-1 {
+  padding: 0 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.row-wrapper .row-1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.row-wrapper .row-2 {
+  padding: 0 4px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-wrapper .row-2 img {
+  margin-top: 8px;
+  width: 49.5%;
+}
+
+.add-wrapper {
+  text-align: left;
+}
+
+.add-wrapper a {
+  color: #fff;
+}
+.add-wrapper a:hover {
+  color: #fc0;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

@@ -43,7 +43,7 @@ function easeInOutQuad(t) {
  * @param {HTMLElement} element the tag we wants browser to scroll to
  * @param {Number} duration scrolling time in milisecond
  */
- function scrollPage(element, duration) {
+ function scrollPage(element, duration, offset = 0) {
   let startingY = window.pageYOffset;
   let elementY = window.pageYOffset + element.getBoundingClientRect().top;
 
@@ -68,11 +68,16 @@ function easeInOutQuad(t) {
     // It can cause bad-looking slow frames in browser performance tool, so be careful.
     percent = easeInOutCubic(percent);
 
-    window.scrollTo(0, startingY + diff * percent);
+    window.scrollTo(0, startingY + diff * percent + offset);
 
     // Proceed with animation as long as we wanted it to.
     if (time < duration) {
       window.requestAnimationFrame(step);
     }
   });
+}
+
+function validatePhone(phone = '') {
+  var phoneRegex = /^[0-9\-\+]{10,12}$/;
+  return phoneRegex.test(phone);
 }

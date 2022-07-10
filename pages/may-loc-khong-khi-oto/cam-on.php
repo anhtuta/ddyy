@@ -17,7 +17,7 @@
 
 <?php
   $imgThanks = "./may-loc-kk-6-vn.jpg";
-  $phoneNum = "0354 948 368";
+  $phoneNum = "0961 167 595";
   $homePage = "/";
 ?>
 
